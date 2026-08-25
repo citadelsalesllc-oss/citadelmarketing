@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow:wght@400;500;600&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -18,12 +18,7 @@
   "telephone": "+1-208-555-0142",
   "email": "hello@ridgelineplumbingco.com",
   "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Coeur d'Alene",
-    "addressRegion": "ID",
-    "addressCountry": "US"
-  },
+  "address": {"@type": "PostalAddress", "addressLocality": "Coeur d'Alene", "addressRegion": "ID", "addressCountry": "US"},
   "areaServed": [
     {"@type": "City", "name": "Coeur d'Alene, ID"},
     {"@type": "City", "name": "Post Falls, ID"},
@@ -42,193 +37,226 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you offer same-day plumbing service?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes — most calls booked before noon are handled same day. Burst pipes, no hot water, and active leaks jump the line and get a same-day dispatch regardless of when you call."}
-    },
-    {
-      "@type": "Question",
-      "name": "What areas does Ridgeline Plumbing Co. serve?",
-      "acceptedAnswer": {"@type": "Answer", "text": "We serve homeowners in Coeur d'Alene, Post Falls, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area."}
-    },
-    {
-      "@type": "Question",
-      "name": "Do you charge a trip fee to come look at the problem?",
-      "acceptedAnswer": {"@type": "Answer", "text": "No. Estimates are free, and we give you a flat, upfront price before any work starts — no surprise charges on the invoice."}
-    },
-    {
-      "@type": "Question",
-      "name": "Is someone available for plumbing emergencies after hours?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes — call our main line any time for a burst pipe, sewer backup, or no-hot-water emergency and you'll reach a real person, not a call center."}
-    }
+    {"@type": "Question", "name": "Do you offer same-day plumbing service?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — most calls booked before noon are handled same day. Burst pipes, no hot water, and active leaks jump the line and get a same-day dispatch regardless of when you call."}},
+    {"@type": "Question", "name": "What areas does Ridgeline Plumbing Co. serve?", "acceptedAnswer": {"@type": "Answer", "text": "We serve homeowners in Coeur d'Alene, Post Falls, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area."}},
+    {"@type": "Question", "name": "Do you charge a trip fee to come look at the problem?", "acceptedAnswer": {"@type": "Answer", "text": "No. Estimates are free, and we give you a flat, upfront price before any work starts — no surprise charges on the invoice."}},
+    {"@type": "Question", "name": "Is someone available for plumbing emergencies after hours?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — call our main line any time for a burst pipe, sewer backup, or no-hot-water emergency and you'll reach a real person, not a call center."}}
   ]
 }
 </script>
 <style>
 :root{
-  --bg:#0a0a0a; --bg-2:#141414; --bg-3:#1d1d1d; --smoke:#181818;
-  --ink:#f6f6f5; --ink-soft:#b8b8b6; --ink-faint:#7a7a78;
-  --line:#2a2a2a; --line-strong:#404040;
-  --accent:#2168d9; --accent-hover:#1a52ab; --accent-soft:rgba(33,104,217,0.16); --accent-text:#5b9bf5;
-  --focus:#7fb6e8;
+  --paper:#ffffff; --panel:#eef3f8; --panel-2:#e2ecf3;
+  --ink:#0f2436; --ink-soft:#45596b; --ink-faint:#7f8fa0;
+  --line:#d9e2ea; --line-strong:#b9c8d4;
+  --blue:#0f5aa8; --blue-hover:#0c4784; --blue-soft:#e4eef8; --blue-text:#0f5aa8;
+  --copper:#b56a34; --copper-soft:#f5e9dd;
+  --navy:#0f2436; --navy-2:#16324a;
+  --focus:#0f5aa8;
+  --radius:3px;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
-body{background:var(--bg);color:var(--ink);font-family:'Barlow',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.6;text-rendering:optimizeLegibility;}
+body{background:var(--paper);color:var(--ink);font-family:'Public Sans',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.6;text-rendering:optimizeLegibility;}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
 img,svg{max-width:100%;display:block;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
 a{color:inherit;}
-h1,h2{font-family:'Anton',ui-sans-serif,sans-serif;font-weight:400;text-transform:uppercase;text-wrap:balance;margin:0;letter-spacing:0.01em;}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent-text);}
-.eyebrow::before{content:"";width:26px;height:1.5px;background:currentColor;display:inline-block;}
-.stroke{-webkit-text-stroke:1.5px var(--ink);color:transparent;}
+h1,h2,h3{font-family:'Big Shoulders Display',ui-sans-serif,sans-serif;font-weight:700;text-transform:uppercase;text-wrap:balance;margin:0;letter-spacing:0.005em;color:var(--navy);}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue-text);}
+.eyebrow::before{content:"//";color:var(--copper);}
 
-.sample-bar{background:var(--accent);color:#fafafa;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;padding:7px 16px;}
+.sample-bar{background:var(--navy);color:#fff;text-align:center;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11.5px;letter-spacing:0.05em;text-transform:uppercase;padding:7px 16px;}
 
-header.site{position:sticky;top:0;z-index:50;background:rgba(10,10,9,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
-.header-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
-.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;flex:0 0 auto;}
-.brand .b1{font-family:'Anton',sans-serif;font-size:19px;letter-spacing:0.02em;text-transform:uppercase;color:var(--ink);}
-.brand .b2{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);margin-top:3px;}
-nav.main{display:flex;align-items:center;gap:28px;}
-nav.main a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);}
-nav.main a:hover{color:var(--ink);}
-@media (max-width:840px){nav.main{display:none;}}
+.utility-bar{background:var(--navy-2);color:#cfe0ee;}
+.utility-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.02em;}
+.utility-row a{text-decoration:none;color:#fff;}
+.utility-row a:hover{color:var(--copper);}
+@media (max-width:700px){.utility-row .u-hide{display:none;}}
+
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 0;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto;}
+.brand-mark{width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 40px;}
+.brand-mark svg{width:22px;height:22px;}
+.brand-text{display:flex;flex-direction:column;line-height:1;}
+.brand-text .b1{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;letter-spacing:0.01em;text-transform:uppercase;color:var(--navy);}
+.brand-text .b2{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue-text);margin-top:2px;}
+nav.main{display:flex;align-items:center;gap:26px;}
+nav.main a{font-family:'Public Sans',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:0.01em;text-decoration:none;color:var(--ink-soft);}
+nav.main a:hover{color:var(--blue);}
+@media (max-width:900px){nav.main{display:none;}}
 .header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
-.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);border-radius:2px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);flex:0 0 auto;}
-.nav-toggle:hover{border-color:var(--ink);}
+.nav-toggle{display:none;background:none;border:1.5px solid var(--line-strong);border-radius:var(--radius);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--navy);flex:0 0 auto;}
 .nav-toggle svg{width:20px;height:20px;}
 .nav-toggle .icon-close{display:none;}
 .nav-toggle[aria-expanded="true"] .icon-open{display:none;}
 .nav-toggle[aria-expanded="true"] .icon-close{display:block;}
-@media (max-width:840px){.nav-toggle{display:flex;} .header-row .btn-primary{display:none;}}
-.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,0.35);}
+@media (max-width:900px){.nav-toggle{display:flex;} .header-row .btn-primary{display:none;}}
+.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(15,36,54,0.12);}
 .mobile-nav.open{display:block;}
 .mobile-nav .wrap{display:flex;flex-direction:column;padding:4px 24px 20px;gap:0;}
-.mobile-nav a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);padding:14px 0;border-top:1px solid var(--line);}
-.mobile-nav a:hover{color:var(--ink);}
+.mobile-nav a{font-family:'Public Sans',sans-serif;font-weight:600;font-size:16px;text-decoration:none;color:var(--ink-soft);padding:14px 0;border-top:1px solid var(--line);}
 .mobile-nav .btn{margin-top:14px;width:100%;}
-@media (min-width:841px){.mobile-nav{display:none !important;}}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:0.03em;text-transform:uppercase;padding:12px 22px;border-radius:2px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;}
-.btn-primary{background:var(--accent);color:#fafafa;border-color:var(--accent);}
-.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong);}
-.btn-ghost:hover{border-color:var(--ink);}
+@media (min-width:901px){.mobile-nav{display:none !important;}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Public Sans',sans-serif;font-weight:700;font-size:15px;letter-spacing:0.01em;padding:13px 24px;border-radius:var(--radius);text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;}
+.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue);}
+.btn-primary:hover{background:var(--blue-hover);border-color:var(--blue-hover);}
+.btn-ghost{background:transparent;color:var(--navy);border-color:var(--line-strong);}
+.btn-ghost:hover{border-color:var(--navy);}
 .btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
 
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:64px 0;}
-.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 82% 18%, var(--accent-soft), transparent 55%), var(--bg);}
-.hero-grid-lines{position:absolute;inset:0;z-index:0;opacity:0.5;}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center;}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
-.hero-head{display:flex;flex-direction:column;gap:18px;}
-.hero-head h1{font-size:clamp(34px,6vw,66px);line-height:0.98;}
-.hero-lede{font-size:17px;color:var(--ink-soft);max-width:520px;}
+.hero{position:relative;overflow:hidden;background:var(--panel);border-bottom:1px solid var(--line);padding:64px 0 0;}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);background-size:44px 44px;opacity:0.5;mask-image:radial-gradient(ellipse 70% 70% at 70% 30%, black, transparent);}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.9fr;gap:44px;align-items:start;padding-bottom:0;}
+.hero-grid > *{min-width:0;}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;}}
+.hero-head{display:flex;flex-direction:column;gap:18px;padding:26px 0 56px;}
+.hero-head h1{font-size:clamp(36px,5.6vw,60px);line-height:0.98;}
+.hero-lede{font-size:17px;color:var(--ink-soft);max-width:480px;}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px;}
-.hero-art{display:flex;align-items:center;justify-content:center;padding:20px;}
-.hero-art svg{width:100%;max-width:380px;height:auto;color:var(--accent-text);}
-@media (max-width:900px){.hero-art{display:none;}}
+.hero-stars{display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink-soft);}
+.hero-stars .stars{color:var(--copper);letter-spacing:1px;}
 
-.stats{border-bottom:1px solid var(--line);background:var(--bg-2);}
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);}
-@media (max-width:760px){.stats-row{grid-template-columns:repeat(2,1fr);}}
-.stat{padding:30px 24px;border-left:1px solid var(--line);}
-.stat:first-child{border-left:none;}
-@media (max-width:760px){.stat:nth-child(odd){border-left:none;} .stat:nth-child(n+3){border-top:1px solid var(--line);}}
-.stat .num{font-family:'Anton',sans-serif;font-size:clamp(24px,3vw,34px);line-height:1;color:var(--accent-text);}
-.stat .label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.03em;text-transform:uppercase;margin-top:8px;}
-.stat .sub{font-size:12px;color:var(--ink-soft);margin-top:2px;}
+.quote-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 18px 44px rgba(15,36,54,0.12);padding:26px 26px 24px;margin:26px 0 40px;}
+.quote-card .qc-head{font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;}
+.quote-card .qc-sub{font-size:13px;color:var(--ink-soft);margin-bottom:18px;}
+.qc-field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;min-width:0;}
+.qc-field label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);}
+.qc-field input, .qc-field select{width:100%;min-width:0;font-family:'Public Sans',sans-serif;font-size:14.5px;padding:11px 12px;border:1.5px solid var(--line-strong);border-radius:var(--radius);background:#fbfcfd;color:var(--ink);}
+.qc-field input:focus, .qc-field select:focus{outline:2px solid var(--focus);outline-offset:1px;}
+.qc-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0;}
+.qc-row2 > *{min-width:0;}
+.quote-card .btn{width:100%;margin-top:4px;}
+.qc-note{font-size:11.5px;color:var(--ink-faint);margin-top:10px;text-align:center;}
+@media (max-width:960px){.quote-card{max-width:420px;}}
 
-.section{padding:76px 0;}
-.section-head{max-width:680px;margin-bottom:40px;}
-.section-head h2{font-size:clamp(28px,3.8vw,42px);margin:10px 0 12px;}
+.badge-strip{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);}
+.badge-row{display:flex;flex-wrap:wrap;gap:0;justify-content:space-between;}
+.badge{flex:1 1 0;display:flex;align-items:center;justify-content:center;gap:9px;padding:18px 14px;border-left:1px solid rgba(255,255,255,0.1);font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.03em;text-transform:uppercase;color:#dce6ef;text-align:center;}
+.badge:first-child{border-left:none;}
+.badge svg{width:17px;height:17px;color:var(--copper);flex:0 0 auto;}
+@media (max-width:860px){.badge{flex:1 1 50%;border-left:none;border-top:1px solid rgba(255,255,255,0.1);}}
+
+.section{padding:80px 0;}
+.section-head{max-width:640px;margin-bottom:40px;}
+.section-head h2{font-size:clamp(28px,3.6vw,40px);margin:10px 0 12px;}
 .section-head p{color:var(--ink-soft);font-size:16px;margin:0;}
 
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-@media (max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:600px){.svc-grid{grid-template-columns:1fr;}}
-.svc-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:26px 24px;transition:border-color .2s ease;}
-.svc-card:hover{border-color:var(--ink-soft);}
-.svc-icon{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--accent-text);margin-bottom:16px;}
-.svc-icon svg{width:22px;height:22px;}
-.svc-card h3{font-family:'Barlow',sans-serif;font-weight:600;font-size:18px;margin:0 0 8px;}
-.svc-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+.svc-list{border-top:1px solid var(--line);}
+.svc-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);}
+.svc-row:nth-child(even){background:var(--panel);margin:0 -24px;padding:22px 24px;}
+.svc-num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--copper);}
+.svc-icon{width:44px;height:44px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;}
+.svc-icon svg{width:21px;height:21px;}
+.svc-body h3{font-family:'Public Sans',sans-serif;font-weight:700;text-transform:none;font-size:18px;color:var(--navy);margin:0 0 4px;}
+.svc-body p{font-size:14px;color:var(--ink-soft);margin:0;max-width:520px;}
+.svc-row-grid{display:flex;align-items:center;gap:18px;}
+.svc-arrow{color:var(--line-strong);font-size:20px;}
+@media (max-width:700px){.svc-row{grid-template-columns:48px 1fr;}.svc-arrow{display:none;}}
 
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-@media (max-width:860px){.trust-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:520px){.trust-grid{grid-template-columns:1fr;}}
-.trust-card{border-top:1px solid var(--line);padding-top:16px;}
-.trust-num{font-family:'Anton',sans-serif;font-size:14px;letter-spacing:0.04em;color:var(--accent-text);}
-.trust-card h3{font-family:'Anton',sans-serif;font-size:18px;letter-spacing:0.03em;text-transform:uppercase;margin:8px 0 8px;}
-.trust-card p{color:var(--ink-soft);font-size:14px;margin:0;line-height:1.55;}
+.why-split{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
+@media (max-width:860px){.why-split{grid-template-columns:1fr;gap:32px;}}
+.why-stats{display:flex;flex-direction:column;gap:0;}
+.why-stat{padding:18px 0;border-top:1px solid var(--line);}
+.why-stat:last-child{border-bottom:1px solid var(--line);}
+.why-stat .n{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:44px;line-height:1;color:var(--blue);}
+.why-stat .l{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;}
+.check-list{display:flex;flex-direction:column;gap:16px;}
+.check-item{display:flex;gap:14px;align-items:flex-start;}
+.check-item .ck{width:24px;height:24px;border-radius:50%;background:var(--copper-soft);color:var(--copper);display:flex;align-items:center;justify-content:center;flex:0 0 24px;margin-top:2px;}
+.check-item .ck svg{width:13px;height:13px;}
+.check-item h4{margin:0 0 3px;font-family:'Public Sans',sans-serif;font-weight:700;font-size:16px;color:var(--navy);text-transform:none;}
+.check-item p{margin:0;font-size:14px;color:var(--ink-soft);}
 
-.areas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
-@media (max-width:900px){.areas-grid{grid-template-columns:repeat(3,1fr);}}
-@media (max-width:600px){.areas-grid{grid-template-columns:1fr 1fr;}}
-.area-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:20px 18px;}
-.area-card h3{font-family:'Anton',sans-serif;font-size:16px;letter-spacing:0.03em;text-transform:uppercase;margin:0 0 6px;}
-.area-card p{color:var(--ink-soft);font-size:13px;margin:0;}
+.coverage-section{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.coverage-table{width:100%;border-collapse:collapse;}
+.coverage-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);padding:0 0 12px;border-bottom:2px solid var(--navy);}
+.coverage-table td{padding:16px 0;border-bottom:1px solid var(--line-strong);font-size:15px;}
+.coverage-table td:first-child{font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;color:var(--navy);}
+.coverage-table .resp{font-family:'IBM Plex Mono',monospace;color:var(--blue-text);font-weight:600;}
+.coverage-wrap{overflow-x:auto;}
 
-.gallery-note{max-width:680px;margin:0 0 32px;font-size:13.5px;color:var(--ink-faint);border:1px dashed var(--line-strong);padding:10px 16px;border-radius:2px;}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-@media (max-width:900px){.review-grid{grid-template-columns:1fr;}}
-.review-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:14px;}
-.review-stars{color:var(--accent-text);font-size:14px;letter-spacing:2px;}
-.review-card p{font-size:14.5px;color:var(--ink-soft);margin:0;line-height:1.6;}
-.review-name{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);}
+.spotlight{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:6px;padding:40px;}
+@media (max-width:800px){.spotlight{grid-template-columns:1fr;text-align:center;}}
+.spotlight blockquote{margin:0;font-family:'Big Shoulders Display',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);text-transform:none;line-height:1.25;color:var(--navy);letter-spacing:0;}
+.spotlight cite{display:block;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:13px;color:var(--ink-soft);}
+.spotlight-score{text-align:center;flex:0 0 auto;}
+.spotlight-score .num{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:56px;color:var(--copper);line-height:1;}
+.spotlight-score .stars{color:var(--copper);font-size:16px;margin-top:6px;}
+.spotlight-score .of{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-faint);margin-top:4px;}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:28px;}
+.dots span{width:7px;height:7px;border-radius:50%;background:var(--line-strong);}
+.dots span.active{background:var(--blue);}
+.gallery-note{max-width:680px;margin:24px auto 0;font-size:13px;color:var(--ink-faint);text-align:center;}
 
 .faq-list{max-width:760px;}
-.faq-item{border-top:1px solid var(--line);padding:20px 0;}
+.faq-item{border-top:1px solid var(--line);}
 .faq-item:last-child{border-bottom:1px solid var(--line);}
-.faq-item h3{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:18px;letter-spacing:0.01em;margin:0 0 8px;}
-.faq-item p{color:var(--ink-soft);font-size:15px;margin:0;max-width:640px;}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:none;text-align:left;padding:20px 0;cursor:pointer;font-family:'Public Sans',sans-serif;font-weight:700;font-size:17px;color:var(--navy);}
+.faq-q .plus{font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--blue);flex:0 0 auto;transition:transform .2s ease;}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+.faq-item.open .faq-a{max-height:200px;}
+.faq-a p{margin:0 0 20px;font-size:15px;color:var(--ink-soft);max-width:640px;}
 
-.cta-band{position:relative;background:var(--bg);border-top:1px solid var(--line);overflow:hidden;text-align:center;padding:88px 0;}
-.cta-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Anton',sans-serif;font-size:clamp(5rem,18vw,15rem);line-height:1;letter-spacing:-0.02em;text-transform:uppercase;white-space:nowrap;-webkit-text-stroke:1px var(--line-strong);color:transparent;pointer-events:none;user-select:none;z-index:0;}
-.cta-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
-.cta-inner h2{font-size:clamp(28px,5vw,52px);margin:10px 0 16px;}
-.cta-inner p{color:var(--ink-soft);font-size:16px;max-width:480px;margin:0 auto 30px;}
+.cta-band{background:var(--navy);color:#fff;text-align:center;padding:72px 0;}
+.cta-band .eyebrow{color:var(--copper);}
+.cta-band .eyebrow::before{color:#fff;}
+.cta-band h2{color:#fff;font-size:clamp(28px,4.6vw,46px);margin:10px 0 16px;}
+.cta-band p{color:#c3d3e0;font-size:16px;max-width:480px;margin:0 auto 30px;}
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cta-band .btn-ghost{color:#fff;border-color:rgba(255,255,255,0.35);}
+.cta-band .btn-ghost:hover{border-color:#fff;}
 
-footer.site{padding:0 0 0;border-top:1px solid var(--line);}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding:40px 0 28px;}
+footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;padding:48px 0 28px;}
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
 @media (max-width:480px){.foot-grid{grid-template-columns:1fr;}}
 .foot-col{display:flex;flex-direction:column;gap:9px;}
-.foot-col b{font-family:'Anton',sans-serif;font-size:16px;text-transform:uppercase;}
-.foot-brand p{color:var(--ink-soft);font-size:13px;line-height:1.6;margin:6px 0 4px;max-width:320px;}
-.foot-head{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:2px;}
-.foot-col a{color:var(--ink-soft);font-size:13px;text-decoration:none;}
-.foot-col a:hover{color:var(--ink);}
-.foot-plain{color:var(--ink-faint);font-size:12px;}
-.foot-bottom{border-top:1px solid var(--line);padding:16px 0;font-size:12px;color:var(--ink-faint);}
+.foot-col b{font-family:'Big Shoulders Display',sans-serif;font-size:19px;text-transform:uppercase;color:#fff;}
+.foot-brand p{color:#a9bfd1;font-size:13px;line-height:1.6;margin:6px 0 4px;max-width:300px;}
+.foot-head{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#7f96ab;margin-bottom:2px;}
+.foot-col a{color:#c3d3e0;font-size:13.5px;text-decoration:none;}
+.foot-col a:hover{color:var(--copper);}
+.foot-plain{color:#7f96ab;font-size:12.5px;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:16px 0;font-size:12px;color:#7f96ab;}
 .foot-bottom .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 
-.floating-cta{position:fixed;right:20px;bottom:20px;z-index:500;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fafafa;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.03em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,0.4);transition:background .2s ease, transform .2s ease;}
-.floating-cta:hover{background:var(--accent-hover);transform:translateY(-2px);}
-.floating-cta .fc-dot{width:7px;height:7px;border-radius:50%;background:#fafafa;animation:pulse 1.8s ease-in-out infinite;flex:0 0 7px;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.25;}}
-@media (max-width:840px){.floating-cta{right:14px;bottom:14px;padding:12px 18px;font-size:13px;}}
+.floating-cta{position:fixed;right:20px;bottom:20px;z-index:500;display:inline-flex;align-items:center;gap:8px;background:var(--copper);color:#fff;font-family:'Public Sans',sans-serif;font-weight:700;font-size:14.5px;text-decoration:none;padding:14px 22px;border-radius:999px;box-shadow:0 10px 26px rgba(181,106,52,0.4);transition:background .2s ease, transform .2s ease;}
+.floating-cta:hover{transform:translateY(-2px);}
+.floating-cta .fc-dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.8s ease-in-out infinite;flex:0 0 7px;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+@media (max-width:900px){.floating-cta{right:14px;bottom:14px;padding:12px 18px;font-size:13px;}}
 
-[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.68,.18,1), transform .7s cubic-bezier(.2,.68,.18,1);}
+[data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
 [data-reveal].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}}
 </style>
 </head>
 <body>
 <div class="sample-bar">Concept Site — Portfolio Sample by Citadel Sales &amp; Marketing, Not a Live Business</div>
+<div class="utility-bar">
+  <div class="wrap utility-row">
+    <span class="u-hide">Mon&ndash;Fri 7am&ndash;6pm &middot; 24/7 Emergency Line</span>
+    <span><a href="tel:12085550142">Call or Text: 208.555.0142</a></span>
+  </div>
+</div>
 <header class="site">
   <div class="wrap header-row">
     <a class="brand" href="#top">
-      <span class="b1">Ridgeline</span>
-      <span class="b2">Plumbing Co.</span>
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3 4-6 8-6 11.5A6 6 0 0 0 12 21a6 6 0 0 0 6-6.5C18 11 15 7 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+      <span class="brand-text">
+        <span class="b1">Ridgeline</span>
+        <span class="b2">Plumbing Co. &middot; Est. Idaho</span>
+      </span>
     </a>
     <nav class="main">
       <a href="#services">Services</a>
       <a href="#why-us">Why Us</a>
-      <a href="#areas">Service Area</a>
+      <a href="#areas">Coverage</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
@@ -245,7 +273,7 @@ footer.site{padding:0 0 0;border-top:1px solid var(--line);}
     <div class="wrap">
       <a href="#services">Services</a>
       <a href="#why-us">Why Us</a>
-      <a href="#areas">Service Area</a>
+      <a href="#areas">Coverage</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
@@ -259,168 +287,183 @@ footer.site{padding:0 0 0;border-top:1px solid var(--line);}
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-head">
-      <p class="eyebrow" data-reveal>24/7 Residential Plumbing &mdash; North Idaho</p>
-      <h1 data-reveal>Fast, Honest Plumbing.<br><span class="stroke">Done Right The First Time.</span></h1>
+      <p class="eyebrow" data-reveal>Residential Plumbing &mdash; North Idaho</p>
+      <h1 data-reveal>Fast, Honest Plumbing.<br>Done Right The First Time.</h1>
       <p class="hero-lede" data-reveal>Drain clogs, water heater trouble, and leaks don&rsquo;t wait for a good time &mdash; neither do we. Same-day service for homeowners in Coeur d&rsquo;Alene, Post Falls, Hayden, and North Idaho, with upfront pricing before any wrench turns.</p>
+      <div class="hero-stars" data-reveal><span class="stars">★★★★★</span> Sample rating format &mdash; 4.9 avg. from local reviews</div>
       <div class="hero-ctas" data-reveal>
         <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call Now</a>
         <a class="btn btn-ghost" href="#contact">Request an Estimate</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 200 200" fill="none">
-        <circle cx="100" cy="100" r="98" stroke="currentColor" stroke-opacity="0.25" stroke-width="1"/>
-        <circle cx="100" cy="100" r="76" stroke="currentColor" stroke-opacity="0.18" stroke-width="1"/>
-        <path d="M55 60h30a10 10 0 0 1 10 10v20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        <path d="M95 90v50" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="95" cy="150" r="9" stroke="currentColor" stroke-width="4"/>
-        <path d="M130 55l25 25M155 55l-25 25" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="142.5" cy="67.5" r="15" stroke="currentColor" stroke-width="3.5"/>
-        <path d="M65 130c0 12 8 22 8 22s8-10 8-22a8 8 0 0 0-16 0Z" fill="currentColor" fill-opacity="0.85"/>
-      </svg>
+    <div data-reveal>
+      <form class="quote-card" onsubmit="return false" aria-label="Request a callback (sample form)">
+        <div class="qc-head">Request A Callback</div>
+        <div class="qc-sub">We&rsquo;ll call you back within the hour during business hours.</div>
+        <div class="qc-field"><label for="qc-name">Name</label><input id="qc-name" type="text" placeholder="Jane Homeowner"></div>
+        <div class="qc-row2">
+          <div class="qc-field"><label for="qc-phone">Phone</label><input id="qc-phone" type="tel" placeholder="(208) 555-0100"></div>
+          <div class="qc-field"><label for="qc-zip">ZIP</label><input id="qc-zip" type="text" placeholder="83814"></div>
+        </div>
+        <div class="qc-field"><label for="qc-issue">What&rsquo;s Going On?</label>
+          <select id="qc-issue">
+            <option>Drain / Clog</option>
+            <option>Water Heater</option>
+            <option>Leak / Burst Pipe</option>
+            <option>New Fixture Install</option>
+            <option>Something Else</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Request Callback</button>
+        <div class="qc-note">Sample form for demonstration &mdash; not connected to a live inbox.</div>
+      </form>
+    </div>
+  </div>
+  <div class="badge-strip">
+    <div class="wrap badge-row">
+      <div class="badge" data-reveal><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Licensed &amp; Insured</div>
+      <div class="badge" data-reveal><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>24/7 Emergency Line</div>
+      <div class="badge" data-reveal><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Upfront Flat-Rate Pricing</div>
+      <div class="badge" data-reveal><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-4-4-7-7.5-7-11.5A7 7 0 0 1 19 9.5C19 13.5 16 17 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Locally Owned</div>
     </div>
   </div>
 </section>
-
-<div class="stats">
-  <div class="wrap stats-row">
-    <div class="stat"><div class="num">24/7</div><div class="label">Emergency Calls</div><div class="sub">Real person, not a call center</div></div>
-    <div class="stat"><div class="num">100%</div><div class="label">Licensed &amp; Insured</div><div class="sub">Idaho plumbing contractor</div></div>
-    <div class="stat"><div class="num">$0</div><div class="label">Trip Charge</div><div class="sub">Free, honest estimates</div></div>
-    <div class="stat"><div class="num">Same-Day</div><div class="label">Service Available</div><div class="sub">Most calls booked before noon</div></div>
-  </div>
-</div>
 
 <section class="section" id="services">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-reveal>What We Do</p>
-      <h2 data-reveal>Plumbing Repairs &amp; Installs Homeowners Actually Need.</h2>
+      <p class="eyebrow" data-reveal>Rate Sheet</p>
+      <h2 data-reveal>Plumbing Repairs Homeowners Actually Need.</h2>
       <p>No upselling, no jargon &mdash; just the fix, explained plainly, priced upfront.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3 4-6 8-6 11.5A6 6 0 0 0 12 21a6 6 0 0 0 6-6.5C18 11 15 7 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-        <h3>Drain Cleaning</h3>
-        <p>Slow or blocked drains cleared fast &mdash; kitchen, bath, and main line, with a camera inspection when needed.</p>
+    <div class="svc-list">
+      <div class="svc-row" data-reveal>
+        <div class="svc-row-grid"><span class="svc-num">01</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3 4-6 8-6 11.5A6 6 0 0 0 12 21a6 6 0 0 0 6-6.5C18 11 15 7 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div></div>
+        <div class="svc-body"><h3>Drain Cleaning</h3><p>Slow or blocked drains cleared fast &mdash; kitchen, bath, and main line, with a camera inspection when needed.</p></div>
+        <span class="svc-arrow">&rarr;</span>
       </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2c2 2.5 3 4 3 5.5a3 3 0 1 1-6 0C9 6 10 4.5 12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><rect x="7" y="11" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <h3>Water Heater Repair &amp; Install</h3>
-        <p>Tank and tankless service &mdash; no hot water, leaks, or a straightforward replacement quote.</p>
+      <div class="svc-row" data-reveal>
+        <div class="svc-row-grid"><span class="svc-num">02</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="9" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.6"/></svg></div></div>
+        <div class="svc-body"><h3>Water Heater Repair &amp; Install</h3><p>Tank and tankless service &mdash; no hot water, leaks, or a straightforward replacement quote.</p></div>
+        <span class="svc-arrow">&rarr;</span>
       </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M14.5 14.5L20 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>Leak Detection &amp; Repair</h3>
-        <p>Hidden slab and wall leaks found without tearing your house apart, then repaired right.</p>
+      <div class="svc-row" data-reveal>
+        <div class="svc-row-grid"><span class="svc-num">03</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M14.5 14.5L20 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="svc-body"><h3>Leak Detection &amp; Repair</h3><p>Hidden slab and wall leaks found without tearing your house apart, then repaired right.</p></div>
+        <span class="svc-arrow">&rarr;</span>
       </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 9h9a4 4 0 0 1 4 4v0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="19" cy="9" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 9V6M9 9V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>Fixture &amp; Faucet Installation</h3>
-        <p>Faucets, sinks, toilets, and garbage disposals installed clean &mdash; your fixtures or ours.</p>
+      <div class="svc-row" data-reveal>
+        <div class="svc-row-grid"><span class="svc-num">04</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 9h9a4 4 0 0 1 4 4v0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="19" cy="9" r="2" stroke="currentColor" stroke-width="1.6"/></svg></div></div>
+        <div class="svc-body"><h3>Fixture &amp; Faucet Installation</h3><p>Faucets, sinks, toilets, and garbage disposals installed clean &mdash; your fixtures or ours.</p></div>
+        <span class="svc-arrow">&rarr;</span>
       </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h16M4 19h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M17 16l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Sewer &amp; Water Line Repair</h3>
-        <p>Trenchless repair options where possible, so your yard doesn&rsquo;t end up looking like a job site.</p>
+      <div class="svc-row" data-reveal>
+        <div class="svc-row-grid"><span class="svc-num">05</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h16M4 19h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="svc-body"><h3>Sewer &amp; Water Line Repair</h3><p>Trenchless repair options where possible, so your yard doesn&rsquo;t end up looking like a job site.</p></div>
+        <span class="svc-arrow">&rarr;</span>
       </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Emergency Plumbing (24/7)</h3>
-        <p>Burst pipe or sewer backup at 2am? Call the same number &mdash; someone picks up.</p>
+      <div class="svc-row" data-reveal>
+        <div class="svc-row-grid"><span class="svc-num">06</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="svc-body"><h3>Emergency Plumbing (24/7)</h3><p>Burst pipe or sewer backup at 2am? Call the same number &mdash; someone picks up.</p></div>
+        <span class="svc-arrow">&rarr;</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="why-us" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+<section class="section" id="why-us" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-reveal>Why Homeowners Call Us</p>
-      <h2 data-reveal>Straight Answers. Fair Prices. No Games.</h2>
+      <h2 data-reveal>Straight Answers. Fair Prices.</h2>
     </div>
-    <div class="trust-grid">
-      <div class="trust-card" data-reveal><span class="trust-num">01</span><h3>Licensed &amp; Insured</h3><p>Fully licensed Idaho plumbing contractor &mdash; verified and insured for work in your home.</p></div>
-      <div class="trust-card" data-reveal><span class="trust-num">02</span><h3>Upfront Flat-Rate Pricing</h3><p>You approve the price before we start. No hourly surprises on the final bill.</p></div>
-      <div class="trust-card" data-reveal><span class="trust-num">03</span><h3>Locally Owned</h3><p>Based in Coeur d&rsquo;Alene, not a franchise call center routing you to a subcontractor.</p></div>
-      <div class="trust-card" data-reveal><span class="trust-num">04</span><h3>Clean, Respectful Work</h3><p>Boot covers, drop cloths, and a job site left cleaner than we found it.</p></div>
+    <div class="why-split">
+      <div class="why-stats">
+        <div class="why-stat" data-reveal><div class="n">24/7</div><div class="l">Emergency Response</div></div>
+        <div class="why-stat" data-reveal><div class="n">$0</div><div class="l">Trip Charge For Estimates</div></div>
+        <div class="why-stat" data-reveal><div class="n">100%</div><div class="l">Licensed Idaho Contractor</div></div>
+      </div>
+      <div class="check-list">
+        <div class="check-item" data-reveal><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Upfront Flat-Rate Pricing</h4><p>You approve the price before we start &mdash; no hourly surprises on the final bill.</p></div></div>
+        <div class="check-item" data-reveal><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Locally Owned, Not A Franchise</h4><p>Based in Coeur d&rsquo;Alene &mdash; you talk to the person doing the work, not a call center.</p></div></div>
+        <div class="check-item" data-reveal><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Clean, Respectful Work</h4><p>Boot covers, drop cloths, and a job site left cleaner than we found it.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="areas">
-  <div class="wrap">
+<section class="coverage-section" id="areas">
+  <div class="wrap section">
     <div class="section-head">
-      <p class="eyebrow" data-reveal>Where We Work</p>
+      <p class="eyebrow" data-reveal>Coverage</p>
       <h2 data-reveal>Serving Homeowners Across North Idaho.</h2>
     </div>
-    <div class="areas-grid">
-      <div class="area-card" data-reveal><h3>Coeur d&rsquo;Alene</h3><p>Home base &mdash; fastest response times.</p></div>
-      <div class="area-card" data-reveal><h3>Post Falls</h3><p>Same-day service available.</p></div>
-      <div class="area-card" data-reveal><h3>Hayden</h3><p>Residential repair &amp; install.</p></div>
-      <div class="area-card" data-reveal><h3>Rathdrum</h3><p>Full-service coverage.</p></div>
-      <div class="area-card" data-reveal><h3>Spokane, WA</h3><p>Serving the greater metro area.</p></div>
+    <div class="coverage-wrap">
+    <table class="coverage-table" data-reveal>
+      <thead><tr><th>City</th><th>Typical Response</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Coeur d&rsquo;Alene</td><td class="resp">Same Day</td><td>Home base &mdash; fastest response times</td></tr>
+        <tr><td>Post Falls</td><td class="resp">Same Day</td><td>Full residential coverage</td></tr>
+        <tr><td>Hayden</td><td class="resp">Same / Next Day</td><td>Repair &amp; install</td></tr>
+        <tr><td>Rathdrum</td><td class="resp">Next Day</td><td>Full-service coverage</td></tr>
+        <tr><td>Spokane, WA</td><td class="resp">By Appointment</td><td>Greater metro area</td></tr>
+      </tbody>
+    </table>
     </div>
   </div>
 </section>
 
-<section class="section" id="reviews" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+<section class="section" id="reviews">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-reveal>What Homeowners Say</p>
       <h2 data-reveal>Reviews From The Neighborhood.</h2>
     </div>
-    <p class="gallery-note">Sample review format for portfolio purposes &mdash; illustrates how a real Google review feed would display on the live site.</p>
-    <div class="review-grid">
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;Called about a water heater with no hot water in the morning, had a tech out same afternoon. Priced it before starting, no surprises.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Coeur d&rsquo;Alene, ID</div>
+    <div class="spotlight" data-reveal>
+      <div>
+        <blockquote>&ldquo;Called about a water heater with no hot water in the morning, had a tech out same afternoon. Priced it before starting, no surprises.&rdquo;</blockquote>
+        <cite>Sample Review &mdash; Coeur d&rsquo;Alene, ID</cite>
       </div>
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;Kitchen drain backed up on a Sunday and they still answered. Fixed it fast and didn&rsquo;t charge an arm and a leg for the weekend call.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Post Falls, ID</div>
-      </div>
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;Found a slab leak another company couldn&rsquo;t. Explained everything in plain English before touching anything.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Hayden, ID</div>
+      <div class="spotlight-score">
+        <div class="num">4.9</div>
+        <div class="stars">★★★★★</div>
+        <div class="of">Sample rating format</div>
       </div>
     </div>
+    <div class="dots"><span class="active"></span><span></span><span></span></div>
+    <p class="gallery-note">Sample review format for portfolio purposes &mdash; illustrates how a real Google review feed would display on the live site.</p>
   </div>
 </section>
 
-<section class="section" id="faq">
+<section class="section" id="faq" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-reveal>Questions</p>
       <h2 data-reveal>Frequently Asked Questions.</h2>
     </div>
-    <div class="faq-list">
-      <div class="faq-item" data-reveal>
-        <h3>Do you offer same-day plumbing service?</h3>
-        <p>Yes &mdash; most calls booked before noon are handled same day. Burst pipes, no hot water, and active leaks jump the line and get a same-day dispatch regardless of when you call.</p>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item open" data-reveal>
+        <button class="faq-q">Do you offer same-day plumbing service?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes &mdash; most calls booked before noon are handled same day. Burst pipes, no hot water, and active leaks jump the line and get a same-day dispatch regardless of when you call.</p></div>
       </div>
       <div class="faq-item" data-reveal>
-        <h3>What areas does Ridgeline Plumbing Co. serve?</h3>
-        <p>We serve homeowners in Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area.</p>
+        <button class="faq-q">What areas does Ridgeline Plumbing Co. serve?<span class="plus">+</span></button>
+        <div class="faq-a"><p>We serve homeowners in Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area.</p></div>
       </div>
       <div class="faq-item" data-reveal>
-        <h3>Do you charge a trip fee to come look at the problem?</h3>
-        <p>No. Estimates are free, and we give you a flat, upfront price before any work starts &mdash; no surprise charges on the invoice.</p>
+        <button class="faq-q">Do you charge a trip fee to come look at the problem?<span class="plus">+</span></button>
+        <div class="faq-a"><p>No. Estimates are free, and we give you a flat, upfront price before any work starts &mdash; no surprise charges on the invoice.</p></div>
       </div>
       <div class="faq-item" data-reveal>
-        <h3>Is someone available for plumbing emergencies after hours?</h3>
-        <p>Yes &mdash; call our main line any time for a burst pipe, sewer backup, or no-hot-water emergency and you&rsquo;ll reach a real person, not a call center.</p>
+        <button class="faq-q">Is someone available for plumbing emergencies after hours?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes &mdash; call our main line any time for a burst pipe, sewer backup, or no-hot-water emergency and you&rsquo;ll reach a real person, not a call center.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="cta-band" id="contact">
-  <span class="cta-ghost">Ridgeline</span>
-  <div class="wrap cta-inner">
+  <div class="wrap">
     <p class="eyebrow" style="justify-content:center;" data-reveal>Get It Fixed</p>
     <h2 data-reveal>Something Leaking, Clogged, Or Cold?</h2>
     <p>Tell us what&rsquo;s going on and we&rsquo;ll get back to you fast with a straight answer and a fair price.</p>
@@ -446,7 +489,7 @@ footer.site{padding:0 0 0;border-top:1px solid var(--line);}
       <a href="#services">Emergency Plumbing</a>
     </div>
     <div class="foot-col">
-      <span class="foot-head">Service Area</span>
+      <span class="foot-head">Coverage</span>
       <span class="foot-plain">Coeur d&rsquo;Alene, ID</span>
       <span class="foot-plain">Post Falls, ID</span>
       <span class="foot-plain">Hayden &amp; Rathdrum, ID</span>
@@ -478,15 +521,11 @@ footer.site{padding:0 0 0;border-top:1px solid var(--line);}
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     mobileNav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        mobileNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      a.addEventListener('click', function(){ mobileNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
     });
     document.addEventListener('click', function(e){
       if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && e.target !== navToggle && !navToggle.contains(e.target)) {
-        mobileNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -494,13 +533,20 @@ footer.site{padding:0 0 0;border-top:1px solid var(--line);}
   var revealEls = document.querySelectorAll('[data-reveal]');
   if (!rm && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+      entries.forEach(function(entry){ if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     revealEls.forEach(function(el){ io.observe(el); });
   } else {
     revealEls.forEach(function(el){ el.classList.add('is-in'); });
+  }
+  var faqList = document.getElementById('faqList');
+  if (faqList) {
+    faqList.querySelectorAll('.faq-q').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var item = btn.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
   }
 })();
 </script>

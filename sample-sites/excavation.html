@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow:wght@400;500;600&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -18,12 +18,7 @@
   "telephone": "+1-208-555-0163",
   "email": "office@timberlineexcavationid.com",
   "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Hayden",
-    "addressRegion": "ID",
-    "addressCountry": "US"
-  },
+  "address": {"@type": "PostalAddress", "addressLocality": "Hayden", "addressRegion": "ID", "addressCountry": "US"},
   "areaServed": [
     {"@type": "City", "name": "Hayden, ID"},
     {"@type": "City", "name": "Coeur d'Alene, ID"},
@@ -41,188 +36,187 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you work on homeowner-scale projects, or only big commercial jobs?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Homeowner-scale is our focus — septic systems, driveways, land clearing, and drainage on residential lots. We're set up for the single-lot job, not just subdivision-sized work."}
-    },
-    {
-      "@type": "Question",
-      "name": "What areas does Timberline Excavation & Site Work serve?",
-      "acceptedAnswer": {"@type": "Answer", "text": "We serve homeowners and small builders in Hayden, Coeur d'Alene, Post Falls, Rathdrum, and the surrounding North Idaho and Spokane, WA area."}
-    },
-    {
-      "@type": "Question",
-      "name": "Are you licensed for septic system installation?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes — we're licensed and bonded for septic system installation and repair in Idaho, and coordinate directly with the county health district on permits and inspections."}
-    },
-    {
-      "@type": "Question",
-      "name": "How do I get an estimate for my property?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Call 208.555.0163 or send a few details and photos to office@timberlineexcavationid.com and we'll schedule a free on-site walk."}
-    }
+    {"@type": "Question", "name": "Do you work on homeowner-scale projects, or only big commercial jobs?", "acceptedAnswer": {"@type": "Answer", "text": "Homeowner-scale is our focus — septic systems, driveways, land clearing, and drainage on residential lots. We're set up for the single-lot job, not just subdivision-sized work."}},
+    {"@type": "Question", "name": "What areas does Timberline Excavation & Site Work serve?", "acceptedAnswer": {"@type": "Answer", "text": "We serve homeowners and small builders in Hayden, Coeur d'Alene, Post Falls, Rathdrum, and the surrounding North Idaho and Spokane, WA area."}},
+    {"@type": "Question", "name": "Are you licensed for septic system installation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — we're licensed and bonded for septic system installation and repair in Idaho, and coordinate directly with the county health district on permits and inspections."}},
+    {"@type": "Question", "name": "How do I get an estimate for my property?", "acceptedAnswer": {"@type": "Answer", "text": "Call 208.555.0163 or send a few details and photos to office@timberlineexcavationid.com and we'll schedule a free on-site walk."}}
   ]
 }
 </script>
 <style>
 :root{
-  --bg:#0a0a0a; --bg-2:#141414; --bg-3:#1d1d1d; --smoke:#181818;
-  --ink:#f6f6f5; --ink-soft:#b8b8b6; --ink-faint:#7a7a78;
-  --line:#2a2a2a; --line-strong:#404040;
-  --accent:#c9821f; --accent-hover:#a3691a; --accent-soft:rgba(201,130,31,0.16); --accent-text:#e2a44a;
-  --pine:#4f7a45; --pine-text:#7fac72;
-  --focus:#7fb6e8;
+  --bg:#18170f; --bg-2:#211f16; --bg-3:#2a271b;
+  --ink:#f4f1e6; --ink-soft:#c3bfaa; --ink-faint:#8b8672;
+  --line:#37331f; --line-strong:#4c4629;
+  --yellow:#f4c430; --yellow-deep:#d4a017; --yellow-ink:#1a1608;
+  --pine:#5c8a52; --pine-soft:#243421;
+  --focus:#f4c430;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
-body{background:var(--bg);color:var(--ink);font-family:'Barlow',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.6;text-rendering:optimizeLegibility;}
+body{background:var(--bg);color:var(--ink);font-family:'Titillium Web',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.6;text-rendering:optimizeLegibility;}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
 img,svg{max-width:100%;display:block;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
 a{color:inherit;}
-h1,h2{font-family:'Anton',ui-sans-serif,sans-serif;font-weight:400;text-transform:uppercase;text-wrap:balance;margin:0;letter-spacing:0.01em;}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent-text);}
-.eyebrow::before{content:"";width:26px;height:1.5px;background:currentColor;display:inline-block;}
-.stroke{-webkit-text-stroke:1.5px var(--ink);color:transparent;}
+h1,h2,h3{font-family:'Teko',ui-sans-serif,sans-serif;font-weight:600;text-transform:uppercase;text-wrap:balance;margin:0;letter-spacing:0.01em;line-height:0.96;}
+.mono{font-family:'Share Tech Mono',ui-monospace,monospace;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Share Tech Mono',monospace;font-weight:400;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--yellow);}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--yellow);display:inline-block;}
 
-.sample-bar{background:var(--accent);color:#0a0a0a;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;padding:7px 16px;}
+.sample-bar{background:var(--yellow);color:var(--yellow-ink);text-align:center;font-family:'Share Tech Mono',monospace;font-weight:400;font-size:11.5px;letter-spacing:0.05em;text-transform:uppercase;padding:7px 16px;}
+.hazard-bar{height:8px;background:repeating-linear-gradient(-45deg, var(--yellow) 0 14px, #16150e 14px 28px);}
 
-header.site{position:sticky;top:0;z-index:50;background:rgba(10,10,9,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+header.site{position:sticky;top:0;z-index:50;background:rgba(24,23,15,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
 .header-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
-.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;flex:0 0 auto;}
-.brand .b1{font-family:'Anton',sans-serif;font-size:19px;letter-spacing:0.02em;text-transform:uppercase;color:var(--ink);}
-.brand .b2{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);margin-top:3px;}
-nav.main{display:flex;align-items:center;gap:28px;}
-nav.main a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);}
-nav.main a:hover{color:var(--ink);}
-@media (max-width:840px){nav.main{display:none;}}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto;}
+.brand-mark{width:38px;height:38px;background:var(--yellow);color:var(--yellow-ink);display:flex;align-items:center;justify-content:center;flex:0 0 38px;clip-path:polygon(15% 0,100% 0,85% 100%,0 100%);}
+.brand-mark svg{width:19px;height:19px;}
+.brand-text{display:flex;flex-direction:column;line-height:0.95;}
+.brand-text .b1{font-family:'Teko',sans-serif;font-weight:700;font-size:26px;letter-spacing:0.02em;text-transform:uppercase;color:var(--ink);}
+.brand-text .b2{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--yellow);margin-top:2px;}
+nav.main{display:flex;align-items:center;gap:26px;}
+nav.main a{font-family:'Titillium Web',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);}
+nav.main a:hover{color:var(--yellow);}
+@media (max-width:900px){nav.main{display:none;}}
 .header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
-.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);border-radius:2px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);flex:0 0 auto;}
-.nav-toggle:hover{border-color:var(--ink);}
+.nav-toggle{display:none;background:none;border:1.5px solid var(--line-strong);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);flex:0 0 auto;}
 .nav-toggle svg{width:20px;height:20px;}
 .nav-toggle .icon-close{display:none;}
 .nav-toggle[aria-expanded="true"] .icon-open{display:none;}
 .nav-toggle[aria-expanded="true"] .icon-close{display:block;}
-@media (max-width:840px){.nav-toggle{display:flex;} .header-row .btn-primary{display:none;}}
-.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,0.35);}
+@media (max-width:900px){.nav-toggle{display:flex;} .header-row .btn-primary{display:none;}}
+.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,0.4);}
 .mobile-nav.open{display:block;}
 .mobile-nav .wrap{display:flex;flex-direction:column;padding:4px 24px 20px;gap:0;}
-.mobile-nav a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);padding:14px 0;border-top:1px solid var(--line);}
-.mobile-nav a:hover{color:var(--ink);}
+.mobile-nav a{font-family:'Titillium Web',sans-serif;font-weight:600;font-size:16px;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);padding:14px 0;border-top:1px solid var(--line);}
 .mobile-nav .btn{margin-top:14px;width:100%;}
-@media (min-width:841px){.mobile-nav{display:none !important;}}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:0.03em;text-transform:uppercase;padding:12px 22px;border-radius:2px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;}
-.btn-primary{background:var(--accent);color:#0a0a0a;border-color:var(--accent);}
-.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fafafa;}
+@media (min-width:901px){.mobile-nav{display:none !important;}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Titillium Web',sans-serif;font-weight:700;font-size:15px;letter-spacing:0.03em;text-transform:uppercase;padding:13px 24px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);}
+.btn-primary{background:var(--yellow);color:var(--yellow-ink);border-color:var(--yellow);}
+.btn-primary:hover{background:var(--yellow-deep);border-color:var(--yellow-deep);}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong);}
 .btn-ghost:hover{border-color:var(--ink);}
 .btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
 
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:64px 0;}
-.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 82% 18%, var(--accent-soft), transparent 55%), radial-gradient(circle at 10% 90%, rgba(79,122,69,0.14), transparent 50%), var(--bg);}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center;}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
-.hero-head{display:flex;flex-direction:column;gap:18px;}
-.hero-head h1{font-size:clamp(34px,6vw,62px);line-height:0.98;}
-.hero-lede{font-size:17px;color:var(--ink-soft);max-width:520px;}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);padding:56px 0 0;}
+.hero-plate{position:absolute;inset:0;z-index:0;opacity:0.5;
+  background-image:repeating-linear-gradient(45deg, rgba(244,196,48,0.05) 0 2px, transparent 2px 22px),
+                    repeating-linear-gradient(-45deg, rgba(244,196,48,0.05) 0 2px, transparent 2px 22px);
+  mask-image:radial-gradient(ellipse 65% 65% at 25% 35%, black, transparent);}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.85fr;gap:44px;align-items:start;padding:28px 0 60px;}
+.hero-grid > *{min-width:0;}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;}}
+.hero-head{display:flex;flex-direction:column;gap:16px;}
+.hero-head h1{font-size:clamp(46px,8vw,90px);}
+.hero-head h1 .yl{color:var(--yellow);}
+.hero-lede{font-size:17px;color:var(--ink-soft);max-width:480px;font-family:'Titillium Web',sans-serif;}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px;}
-.hero-art{display:flex;align-items:center;justify-content:center;padding:20px;}
-.hero-art svg{width:100%;max-width:400px;height:auto;}
-@media (max-width:900px){.hero-art{display:none;}}
 
-.stats{border-bottom:1px solid var(--line);background:var(--bg-2);}
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);}
-@media (max-width:760px){.stats-row{grid-template-columns:repeat(2,1fr);}}
-.stat{padding:30px 24px;border-left:1px solid var(--line);}
-.stat:first-child{border-left:none;}
-@media (max-width:760px){.stat:nth-child(odd){border-left:none;} .stat:nth-child(n+3){border-top:1px solid var(--line);}}
-.stat .num{font-family:'Anton',sans-serif;font-size:clamp(24px,3vw,34px);line-height:1;color:var(--accent-text);}
-.stat .label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.03em;text-transform:uppercase;margin-top:8px;}
-.stat .sub{font-size:12px;color:var(--ink-soft);margin-top:2px;}
+.spec-plate{position:relative;background:var(--bg-2);border:1.5px solid var(--line-strong);padding:26px 26px 22px;margin-top:8px;}
+.spec-plate::before, .spec-plate::after, .spec-plate .rv2::before, .spec-plate .rv2::after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--line-strong);box-shadow:inset 0 1px 2px rgba(0,0,0,0.6);}
+.spec-plate::before{top:8px;left:8px;}
+.spec-plate::after{top:8px;right:8px;}
+.spec-plate .rv2::before{position:absolute;bottom:8px;left:8px;top:auto;}
+.spec-plate .rv2::after{position:absolute;bottom:8px;right:8px;top:auto;}
+.spec-head{font-family:'Share Tech Mono',monospace;font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--yellow);border-bottom:1px solid var(--line-strong);padding-bottom:12px;margin-bottom:14px;}
+.spec-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px dashed var(--line);font-family:'Share Tech Mono',monospace;font-size:12.5px;}
+.spec-row:first-of-type{border-top:none;}
+.spec-row .k{color:var(--ink-faint);letter-spacing:0.04em;}
+.spec-row .v{color:var(--ink);text-align:right;}
 
 .section{padding:76px 0;}
-.section-head{max-width:680px;margin-bottom:40px;}
-.section-head h2{font-size:clamp(28px,3.8vw,42px);margin:10px 0 12px;}
-.section-head p{color:var(--ink-soft);font-size:16px;margin:0;}
+.section-head{max-width:640px;margin-bottom:36px;}
+.section-head h2{font-size:clamp(34px,4.6vw,52px);margin:8px 0 12px;}
+.section-head p{color:var(--ink-soft);font-size:16px;margin:0;font-family:'Titillium Web',sans-serif;}
 
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-@media (max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:600px){.svc-grid{grid-template-columns:1fr;}}
-.svc-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:26px 24px;transition:border-color .2s ease;}
-.svc-card:hover{border-color:var(--ink-soft);}
-.svc-icon{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--accent-text);margin-bottom:16px;}
-.svc-icon svg{width:22px;height:22px;}
-.svc-card h3{font-family:'Barlow',sans-serif;font-weight:600;font-size:18px;margin:0 0 8px;}
-.svc-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+.spec-table-wrap{overflow-x:auto;border:1px solid var(--line-strong);}
+.spec-table{width:100%;border-collapse:collapse;min-width:640px;}
+.spec-table th{text-align:left;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--yellow);background:var(--bg-2);padding:14px 18px;border-bottom:2px solid var(--yellow);}
+.spec-table td{padding:16px 18px;border-bottom:1px solid var(--line);font-family:'Titillium Web',sans-serif;font-size:14.5px;color:var(--ink-soft);vertical-align:top;}
+.spec-table tr:last-child td{border-bottom:none;}
+.spec-table tr:nth-child(even) td{background:rgba(244,196,48,0.03);}
+.spec-table .svc-name{font-family:'Teko',sans-serif;font-weight:600;font-size:21px;text-transform:uppercase;color:var(--ink);letter-spacing:0.01em;}
+.spec-table .tl{font-family:'Share Tech Mono',monospace;color:var(--yellow);white-space:nowrap;}
 
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.marquee-band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marquee 26s linear infinite;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none;}}
+.marquee-item{display:flex;align-items:center;gap:10px;font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);padding:0 28px;white-space:nowrap;border-right:1px solid var(--line-strong);}
+.marquee-item .dot{width:6px;height:6px;background:var(--yellow);flex:0 0 6px;}
+
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
 @media (max-width:860px){.trust-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:520px){.trust-grid{grid-template-columns:1fr;}}
-.trust-card{border-top:1px solid var(--line);padding-top:16px;}
-.trust-num{font-family:'Anton',sans-serif;font-size:14px;letter-spacing:0.04em;color:var(--accent-text);}
-.trust-card h3{font-family:'Anton',sans-serif;font-size:18px;letter-spacing:0.03em;text-transform:uppercase;margin:8px 0 8px;}
-.trust-card p{color:var(--ink-soft);font-size:14px;margin:0;line-height:1.55;}
+.trust-card{background:var(--bg);padding:26px 24px;}
+.trust-num{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--yellow);}
+.trust-card h3{font-size:24px;text-transform:uppercase;margin:8px 0 8px;}
+.trust-card p{color:var(--ink-soft);font-size:14px;margin:0;line-height:1.55;font-family:'Titillium Web',sans-serif;}
 
-.areas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
-@media (max-width:900px){.areas-grid{grid-template-columns:repeat(3,1fr);}}
-@media (max-width:600px){.areas-grid{grid-template-columns:1fr 1fr;}}
-.area-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:20px 18px;}
-.area-card h3{font-family:'Anton',sans-serif;font-size:16px;letter-spacing:0.03em;text-transform:uppercase;margin:0 0 6px;}
-.area-card p{color:var(--ink-soft);font-size:13px;margin:0;}
+.topo-section{position:relative;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;}
+.topo-lines{position:absolute;inset:0;opacity:0.35;}
+.areas-list{display:flex;flex-wrap:wrap;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);position:relative;z-index:1;}
+.areas-list .a{flex:1 1 180px;background:var(--bg-2);padding:18px 20px;}
+.areas-list .a h3{font-size:22px;text-transform:uppercase;margin:0 0 4px;color:var(--yellow);}
+.areas-list .a p{margin:0;font-size:13px;color:var(--ink-soft);font-family:'Titillium Web',sans-serif;}
 
-.gallery-note{max-width:680px;margin:0 0 32px;font-size:13.5px;color:var(--ink-faint);border:1px dashed var(--line-strong);padding:10px 16px;border-radius:2px;}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-@media (max-width:900px){.review-grid{grid-template-columns:1fr;}}
-.review-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:14px;}
-.review-stars{color:var(--accent-text);font-size:14px;letter-spacing:2px;}
-.review-card p{font-size:14.5px;color:var(--ink-soft);margin:0;line-height:1.6;}
-.review-name{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);}
+.ticket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media (max-width:900px){.ticket-grid{grid-template-columns:1fr;}}
+.ticket{position:relative;background:var(--bg-2);border:1.5px dashed var(--line-strong);padding:22px;}
+.ticket-stamp{position:absolute;top:16px;right:16px;border:2px solid var(--pine);color:var(--pine);font-family:'Share Tech Mono',monospace;font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;padding:3px 8px;transform:rotate(8deg);opacity:0.85;}
+.ticket-head{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;}
+.ticket p.body{font-size:14.5px;color:var(--ink-soft);margin:0 0 16px;font-family:'Titillium Web',sans-serif;line-height:1.6;}
+.ticket .who{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--yellow);}
+.gallery-note{max-width:680px;margin:0 0 28px;font-size:13px;color:var(--ink-faint);font-family:'Share Tech Mono',monospace;}
 
 .faq-list{max-width:760px;}
 .faq-item{border-top:1px solid var(--line);padding:20px 0;}
 .faq-item:last-child{border-bottom:1px solid var(--line);}
-.faq-item h3{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:18px;letter-spacing:0.01em;margin:0 0 8px;}
-.faq-item p{color:var(--ink-soft);font-size:15px;margin:0;max-width:640px;}
+.faq-item h3{font-family:'Titillium Web',sans-serif;font-weight:700;font-size:18px;text-transform:none;letter-spacing:0;margin:0 0 8px;}
+.faq-item p{color:var(--ink-soft);font-size:15px;margin:0;max-width:640px;font-family:'Titillium Web',sans-serif;}
 
-.cta-band{position:relative;background:var(--bg);border-top:1px solid var(--line);overflow:hidden;text-align:center;padding:88px 0;}
-.cta-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Anton',sans-serif;font-size:clamp(4rem,14vw,12rem);line-height:1;letter-spacing:-0.02em;text-transform:uppercase;white-space:nowrap;-webkit-text-stroke:1px var(--line-strong);color:transparent;pointer-events:none;user-select:none;z-index:0;}
-.cta-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
-.cta-inner h2{font-size:clamp(28px,5vw,52px);margin:10px 0 16px;}
-.cta-inner p{color:var(--ink-soft);font-size:16px;max-width:480px;margin:0 auto 30px;}
+.cta-band{position:relative;background:var(--bg);text-align:center;padding:0;}
+.cta-inner-wrap{padding:80px 0;}
+.cta-inner{max-width:640px;margin:0 auto;}
+.cta-inner h2{font-size:clamp(40px,7vw,68px);margin:10px 0 16px;}
+.cta-inner p{color:var(--ink-soft);font-size:16px;max-width:480px;margin:0 auto 30px;font-family:'Titillium Web',sans-serif;}
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 
-footer.site{padding:0;border-top:1px solid var(--line);}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding:40px 0 28px;}
+footer.site{background:#100f0a;padding:0;border-top:1px solid var(--line);}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding:44px 0 28px;}
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
 @media (max-width:480px){.foot-grid{grid-template-columns:1fr;}}
 .foot-col{display:flex;flex-direction:column;gap:9px;}
-.foot-col b{font-family:'Anton',sans-serif;font-size:16px;text-transform:uppercase;}
-.foot-brand p{color:var(--ink-soft);font-size:13px;line-height:1.6;margin:6px 0 4px;max-width:320px;}
-.foot-head{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:2px;}
-.foot-col a{color:var(--ink-soft);font-size:13px;text-decoration:none;}
-.foot-col a:hover{color:var(--ink);}
-.foot-plain{color:var(--ink-faint);font-size:12px;}
-.foot-bottom{border-top:1px solid var(--line);padding:16px 0;font-size:12px;color:var(--ink-faint);}
+.foot-col b{font-family:'Teko',sans-serif;font-weight:600;font-size:24px;text-transform:uppercase;color:var(--ink);}
+.foot-brand p{color:var(--ink-faint);font-size:13px;line-height:1.6;margin:6px 0 4px;max-width:300px;font-family:'Titillium Web',sans-serif;}
+.foot-head{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--yellow);margin-bottom:2px;}
+.foot-col a{color:var(--ink-soft);font-size:13.5px;text-decoration:none;font-family:'Titillium Web',sans-serif;}
+.foot-col a:hover{color:var(--yellow);}
+.foot-plain{color:var(--ink-faint);font-size:12.5px;font-family:'Titillium Web',sans-serif;}
+.foot-bottom{border-top:1px solid var(--line);padding:16px 0;font-size:12px;color:var(--ink-faint);font-family:'Share Tech Mono',monospace;}
 .foot-bottom .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 
-.floating-cta{position:fixed;right:20px;bottom:20px;z-index:500;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#0a0a0a;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:0.03em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,0.4);transition:background .2s ease, transform .2s ease;}
-.floating-cta:hover{background:var(--accent-hover);transform:translateY(-2px);}
-.floating-cta .fc-dot{width:7px;height:7px;border-radius:50%;background:#0a0a0a;animation:pulse 1.8s ease-in-out infinite;flex:0 0 7px;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.25;}}
-@media (max-width:840px){.floating-cta{right:14px;bottom:14px;padding:12px 18px;font-size:13px;}}
+.floating-cta{position:fixed;right:20px;bottom:20px;z-index:500;display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--yellow-ink);font-family:'Titillium Web',sans-serif;font-weight:700;font-size:14.5px;text-transform:uppercase;text-decoration:none;padding:14px 22px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);box-shadow:0 10px 26px rgba(0,0,0,0.5);transition:transform .2s ease;}
+.floating-cta:hover{transform:translateY(-2px);}
+@media (max-width:900px){.floating-cta{right:14px;bottom:14px;padding:12px 18px;font-size:13px;}}
 
-[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.68,.18,1), transform .7s cubic-bezier(.2,.68,.18,1);}
+[data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
 [data-reveal].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}}
 </style>
 </head>
 <body>
 <div class="sample-bar">Concept Site — Portfolio Sample by Citadel Sales &amp; Marketing, Not a Live Business</div>
+<div class="hazard-bar" aria-hidden="true"></div>
 <header class="site">
   <div class="wrap header-row">
     <a class="brand" href="#top">
-      <span class="b1">Timberline</span>
-      <span class="b2">Excavation &amp; Site Work</span>
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19l6-14h4l6 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+      <span class="brand-text">
+        <span class="b1">Timberline</span>
+        <span class="b2">Excavation &amp; Site Work</span>
+      </span>
     </a>
     <nav class="main">
       <a href="#services">Services</a>
@@ -255,88 +249,72 @@ footer.site{padding:0;border-top:1px solid var(--line);}
 
 <main>
 <section class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-plate" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-head">
       <p class="eyebrow" data-reveal>Residential Excavation &mdash; North Idaho</p>
-      <h1 data-reveal>Site Work For Your Property.<br><span class="stroke">Not A Subdivision.</span></h1>
+      <h1 data-reveal>Site Work For<br>Your <span class="yl">Property.</span><br>Not A Subdivision.</h1>
       <p class="hero-lede" data-reveal>Septic systems, driveways, land clearing, and drainage &mdash; sized right for a single lot, not scheduled behind a developer&rsquo;s job. Serving homeowners and small builders in Hayden, Coeur d&rsquo;Alene, and North Idaho.</p>
       <div class="hero-ctas" data-reveal>
         <a class="btn btn-primary" href="tel:12085550163">208.555.0163 &mdash; Get an Estimate</a>
         <a class="btn btn-ghost" href="#services">See Our Services</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 220 200" fill="none">
-        <path d="M10 175h200" stroke="var(--line-strong)" stroke-width="1.5"/>
-        <path d="M20 175c30-6 55-30 70-30s25 20 45 20 35-14 55-14" stroke="var(--pine-text)" stroke-opacity="0.5" stroke-width="1.5"/>
-        <g stroke="var(--accent-text)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M55 175v-38h26v38"/>
-          <path d="M81 152l40-14"/>
-          <path d="M121 138l14-22"/>
-          <path d="M135 116l-6 22 22-4Z" fill="var(--accent-text)" fill-opacity="0.85" stroke="none"/>
-        </g>
-        <circle cx="55" cy="175" r="5" fill="var(--accent-text)"/>
-        <circle cx="81" cy="175" r="5" fill="var(--accent-text)"/>
-        <path d="M150 175v-20h30v20" stroke="var(--pine-text)" stroke-width="3" stroke-linejoin="round"/>
-        <path d="M150 155l15-10 15 10" stroke="var(--pine-text)" stroke-width="3" stroke-linejoin="round"/>
-      </svg>
+    <div data-reveal>
+      <div class="spec-plate rv2">
+        <div class="spec-head">Contractor ID Plate</div>
+        <div class="spec-row"><span class="k">STATUS</span><span class="v">Licensed &amp; Bonded</span></div>
+        <div class="spec-row"><span class="k">COVERAGE</span><span class="v">General Liability Insured</span></div>
+        <div class="spec-row"><span class="k">SEPTIC</span><span class="v">County-Certified Installer</span></div>
+        <div class="spec-row"><span class="k">SERVICE AREA</span><span class="v">North Idaho / Spokane</span></div>
+        <div class="spec-row"><span class="k">ESTIMATES</span><span class="v">Free, On-Site</span></div>
+        <div class="spec-row"><span class="k">CREW</span><span class="v">1 Point of Contact</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="stats">
-  <div class="wrap stats-row">
-    <div class="stat"><div class="num">100%</div><div class="label">Licensed &amp; Bonded</div><div class="sub">Idaho excavation contractor</div></div>
-    <div class="stat"><div class="num">Free</div><div class="label">On-Site Estimates</div><div class="sub">We walk the property with you</div></div>
-    <div class="stat"><div class="num stroke">Septic</div><div class="label">Certified Installer</div><div class="sub">County health district coordination</div></div>
-    <div class="stat"><div class="num">1</div><div class="label">Crew, One Point of Contact</div><div class="sub">You talk to the person on-site</div></div>
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="dot"></span>Licensed &amp; Bonded</div>
+    <div class="marquee-item"><span class="dot"></span>Septic Certified</div>
+    <div class="marquee-item"><span class="dot"></span>Free On-Site Estimates</div>
+    <div class="marquee-item"><span class="dot"></span>Locally Owned &mdash; Hayden, ID</div>
+    <div class="marquee-item"><span class="dot"></span>Right-Sized Equipment</div>
+    <div class="marquee-item"><span class="dot"></span>One Point Of Contact</div>
+    <div class="marquee-item"><span class="dot"></span>Licensed &amp; Bonded</div>
+    <div class="marquee-item"><span class="dot"></span>Septic Certified</div>
+    <div class="marquee-item"><span class="dot"></span>Free On-Site Estimates</div>
+    <div class="marquee-item"><span class="dot"></span>Locally Owned &mdash; Hayden, ID</div>
+    <div class="marquee-item"><span class="dot"></span>Right-Sized Equipment</div>
+    <div class="marquee-item"><span class="dot"></span>One Point Of Contact</div>
   </div>
 </div>
 
 <section class="section" id="services">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-reveal>What We Do</p>
+      <p class="eyebrow" data-reveal>Scope Sheet</p>
       <h2 data-reveal>Dirt Work Sized For Your Lot.</h2>
       <p>Homeowner-scale excavation &mdash; not squeezed in behind a subdivision phase.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="9" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <h3>Septic System Installation &amp; Repair</h3>
-        <p>New system design and install, or repair of an aging tank or drainfield &mdash; permitted and inspected.</p>
-      </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19l6-14h4l6 14" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 19h8" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <h3>Driveway Excavation &amp; Grading</h3>
-        <p>Cut, grade, and base a new driveway or fix one that&rsquo;s washing out every spring.</p>
-      </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21V9M12 9c0-4-3-6-6-6M12 9c0-4 3-6 6-6M6 13c1 0 3-1 4-3M18 13c-1 0-3-1-4-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>Land Clearing</h3>
-        <p>Trees, brush, and stumps cleared to open up a homesite, pad, or pasture.</p>
-      </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12c3-4 6 4 9 0s6 4 7 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 3c1.5 3 3 5 3 7.5a3 3 0 1 1-6 0C9 8 10.5 6 12 3Z" stroke="currentColor" stroke-width="1.4"/></svg></div>
-        <h3>Drainage &amp; French Drains</h3>
-        <p>Wet basement or a yard that won&rsquo;t drain? We move the water where it should go.</p>
-      </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 20h14M9 20V9l6-4v15" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 9l16-4" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <h3>Demolition</h3>
-        <p>Old sheds, slabs, and structures removed and hauled &mdash; site left clean and graded.</p>
-      </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 9h9a4 4 0 0 1 4 4v0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="19" cy="9" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 9V6M9 9V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>Utility Trenching</h3>
-        <p>Water, power, and propane line trenching for a new build, shop, or outbuilding.</p>
-      </div>
+    <div class="spec-table-wrap" data-reveal>
+      <table class="spec-table">
+        <thead><tr><th>Service</th><th>Scope</th><th>Typical Timeline</th></tr></thead>
+        <tbody>
+          <tr><td class="svc-name">Septic Systems</td><td>New system design/install or repair of an aging tank or drainfield, permitted &amp; inspected</td><td class="tl">3&ndash;7 Days</td></tr>
+          <tr><td class="svc-name">Driveways &amp; Grading</td><td>Cut, grade, and base a new driveway, or regrade one that&rsquo;s washing out</td><td class="tl">1&ndash;3 Days</td></tr>
+          <tr><td class="svc-name">Land Clearing</td><td>Trees, brush, and stumps cleared to open a homesite, pad, or pasture</td><td class="tl">1&ndash;5 Days</td></tr>
+          <tr><td class="svc-name">Drainage &amp; French Drains</td><td>Move water off a wet basement or a yard that won&rsquo;t drain</td><td class="tl">1&ndash;2 Days</td></tr>
+          <tr><td class="svc-name">Demolition</td><td>Old sheds, slabs, and structures removed, hauled, and graded clean</td><td class="tl">1 Day</td></tr>
+          <tr><td class="svc-name">Utility Trenching</td><td>Water, power, and propane line trenching for a new build or outbuilding</td><td class="tl">1&ndash;2 Days</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<section class="section" id="why-us" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+<section class="section" id="why-us" style="padding-top:0;">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-reveal>Why Homeowners Call Us</p>
@@ -346,93 +324,92 @@ footer.site{padding:0;border-top:1px solid var(--line);}
       <div class="trust-card" data-reveal><span class="trust-num">01</span><h3>Licensed &amp; Bonded</h3><p>Idaho excavation contractor, licensed and bonded for residential site work.</p></div>
       <div class="trust-card" data-reveal><span class="trust-num">02</span><h3>Right-Sized Equipment</h3><p>Machines matched to a residential lot &mdash; not oversized gear that tears up your yard.</p></div>
       <div class="trust-card" data-reveal><span class="trust-num">03</span><h3>Locally Owned</h3><p>Based in Hayden, familiar with North Idaho soil, septic rules, and permitting.</p></div>
-      <div class="trust-card" data-reveal><span class="trust-num">04</span><h3>One Point of Contact</h3><p>You talk to the person running the machine, not a dispatcher three calls removed.</p></div>
+      <div class="trust-card" data-reveal><span class="trust-num">04</span><h3>One Point Of Contact</h3><p>You talk to the person running the machine, not a dispatcher three calls removed.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="areas">
-  <div class="wrap">
+<section class="topo-section" id="areas">
+  <svg class="topo-lines" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 350 C 200 300 300 380 500 340 S 800 260 1200 320" fill="none" stroke="var(--pine)" stroke-width="1.5"/>
+    <path d="M0 300 C 220 250 320 330 520 290 S 820 210 1200 270" fill="none" stroke="var(--pine)" stroke-width="1.5"/>
+    <path d="M0 250 C 240 200 340 280 540 240 S 840 160 1200 220" fill="none" stroke="var(--pine)" stroke-width="1.5"/>
+  </svg>
+  <div class="wrap section">
     <div class="section-head">
       <p class="eyebrow" data-reveal>Where We Work</p>
       <h2 data-reveal>Serving Homeowners Across North Idaho.</h2>
     </div>
-    <div class="areas-grid">
-      <div class="area-card" data-reveal><h3>Hayden</h3><p>Home base &mdash; fastest response times.</p></div>
-      <div class="area-card" data-reveal><h3>Coeur d&rsquo;Alene</h3><p>Full residential site work.</p></div>
-      <div class="area-card" data-reveal><h3>Post Falls</h3><p>Septic, driveways &amp; drainage.</p></div>
-      <div class="area-card" data-reveal><h3>Rathdrum</h3><p>Full-service coverage.</p></div>
-      <div class="area-card" data-reveal><h3>Spokane, WA</h3><p>Serving the greater metro area.</p></div>
+    <div class="areas-list" data-reveal>
+      <div class="a"><h3>Hayden</h3><p>Home base &mdash; fastest response.</p></div>
+      <div class="a"><h3>Coeur d&rsquo;Alene</h3><p>Full residential site work.</p></div>
+      <div class="a"><h3>Post Falls</h3><p>Septic, driveways &amp; drainage.</p></div>
+      <div class="a"><h3>Rathdrum</h3><p>Full-service coverage.</p></div>
+      <div class="a"><h3>Spokane, WA</h3><p>Greater metro area.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="reviews" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+<section class="section" id="reviews">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-reveal>What Homeowners Say</p>
       <h2 data-reveal>Reviews From The Neighborhood.</h2>
     </div>
-    <p class="gallery-note">Sample review format for portfolio purposes &mdash; illustrates how a real Google review feed would display on the live site.</p>
-    <div class="review-grid">
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;Our septic system was failing and the county timeline was tight. They handled the permitting and had the new system in within the week.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Hayden, ID</div>
+    <p class="gallery-note">// SAMPLE REVIEW FORMAT FOR PORTFOLIO PURPOSES</p>
+    <div class="ticket-grid">
+      <div class="ticket" data-reveal>
+        <span class="ticket-stamp">Completed</span>
+        <div class="ticket-head">Job Ticket &mdash; Hayden, ID</div>
+        <p class="body">&ldquo;Our septic system was failing and the county timeline was tight. They handled the permitting and had the new system in within the week.&rdquo;</p>
+        <div class="who">★★★★★ Sample Review</div>
       </div>
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;Regraded our driveway after years of washing out every spring. Hasn&rsquo;t had a problem since. Showed up when they said they would.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Coeur d&rsquo;Alene, ID</div>
+      <div class="ticket" data-reveal>
+        <span class="ticket-stamp">Completed</span>
+        <div class="ticket-head">Job Ticket &mdash; Coeur d&rsquo;Alene, ID</div>
+        <p class="body">&ldquo;Regraded our driveway after years of washing out every spring. Hasn&rsquo;t had a problem since. Showed up when they said they would.&rdquo;</p>
+        <div class="who">★★★★★ Sample Review</div>
       </div>
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;Cleared two acres for a shop pad without wrecking the trees we wanted to keep. Left the site clean every day.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Post Falls, ID</div>
+      <div class="ticket" data-reveal>
+        <span class="ticket-stamp">Completed</span>
+        <div class="ticket-head">Job Ticket &mdash; Post Falls, ID</div>
+        <p class="body">&ldquo;Cleared two acres for a shop pad without wrecking the trees we wanted to keep. Left the site clean every day.&rdquo;</p>
+        <div class="who">★★★★★ Sample Review</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="faq">
+<section class="section" id="faq" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-reveal>Questions</p>
       <h2 data-reveal>Frequently Asked Questions.</h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item" data-reveal>
-        <h3>Do you work on homeowner-scale projects, or only big commercial jobs?</h3>
-        <p>Homeowner-scale is our focus &mdash; septic systems, driveways, land clearing, and drainage on residential lots. We&rsquo;re set up for the single-lot job, not just subdivision-sized work.</p>
-      </div>
-      <div class="faq-item" data-reveal>
-        <h3>What areas does Timberline Excavation &amp; Site Work serve?</h3>
-        <p>We serve homeowners and small builders in Hayden, Coeur d&rsquo;Alene, Post Falls, Rathdrum, and the surrounding North Idaho and Spokane, WA area.</p>
-      </div>
-      <div class="faq-item" data-reveal>
-        <h3>Are you licensed for septic system installation?</h3>
-        <p>Yes &mdash; we&rsquo;re licensed and bonded for septic system installation and repair in Idaho, and coordinate directly with the county health district on permits and inspections.</p>
-      </div>
-      <div class="faq-item" data-reveal>
-        <h3>How do I get an estimate for my property?</h3>
-        <p>Call <a href="tel:12085550163">208.555.0163</a> or send a few details and photos to <a href="mailto:office@timberlineexcavationid.com">office@timberlineexcavationid.com</a> and we&rsquo;ll schedule a free on-site walk.</p>
-      </div>
+      <div class="faq-item" data-reveal><h3>Do you work on homeowner-scale projects, or only big commercial jobs?</h3><p>Homeowner-scale is our focus &mdash; septic systems, driveways, land clearing, and drainage on residential lots. We&rsquo;re set up for the single-lot job, not just subdivision-sized work.</p></div>
+      <div class="faq-item" data-reveal><h3>What areas does Timberline Excavation &amp; Site Work serve?</h3><p>We serve homeowners and small builders in Hayden, Coeur d&rsquo;Alene, Post Falls, Rathdrum, and the surrounding North Idaho and Spokane, WA area.</p></div>
+      <div class="faq-item" data-reveal><h3>Are you licensed for septic system installation?</h3><p>Yes &mdash; we&rsquo;re licensed and bonded for septic system installation and repair in Idaho, and coordinate directly with the county health district on permits and inspections.</p></div>
+      <div class="faq-item" data-reveal><h3>How do I get an estimate for my property?</h3><p>Call <a href="tel:12085550163">208.555.0163</a> or send a few details and photos to <a href="mailto:office@timberlineexcavationid.com">office@timberlineexcavationid.com</a> and we&rsquo;ll schedule a free on-site walk.</p></div>
     </div>
   </div>
 </section>
 
+<div class="hazard-bar" aria-hidden="true"></div>
 <section class="cta-band" id="contact">
-  <span class="cta-ghost">Timberline</span>
-  <div class="wrap cta-inner">
-    <p class="eyebrow" style="justify-content:center;" data-reveal>Let&rsquo;s Talk Ground</p>
-    <h2 data-reveal>Got A Project On Your Property?</h2>
-    <p>Send us the scope and we&rsquo;ll schedule a free on-site walk &mdash; no obligation, no pressure.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="tel:12085550163">208.555.0163 &mdash; Call or Text</a>
-      <a class="btn btn-ghost" href="mailto:office@timberlineexcavationid.com">Email Us</a>
+  <div class="wrap cta-inner-wrap">
+    <div class="cta-inner">
+      <p class="eyebrow" style="justify-content:center;" data-reveal>Let&rsquo;s Talk Ground</p>
+      <h2 data-reveal>Got A Project On Your Property?</h2>
+      <p>Send us the scope and we&rsquo;ll schedule a free on-site walk &mdash; no obligation, no pressure.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:12085550163">208.555.0163 &mdash; Call or Text</a>
+        <a class="btn btn-ghost" href="mailto:office@timberlineexcavationid.com">Email Us</a>
+      </div>
     </div>
   </div>
 </section>
+<div class="hazard-bar" aria-hidden="true"></div>
 </main>
 
 <footer class="site">
@@ -469,7 +446,7 @@ footer.site{padding:0;border-top:1px solid var(--line);}
     </div>
   </div>
 </footer>
-<a class="floating-cta" href="tel:12085550163" aria-label="Call Timberline Excavation &amp; Site Work — 208.555.0163"><span class="fc-dot"></span>Get an Estimate</a>
+<a class="floating-cta" href="tel:12085550163" aria-label="Call Timberline Excavation &amp; Site Work — 208.555.0163">Get an Estimate</a>
 
 <script>
 (function(){
@@ -481,15 +458,11 @@ footer.site{padding:0;border-top:1px solid var(--line);}
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     mobileNav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        mobileNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      a.addEventListener('click', function(){ mobileNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
     });
     document.addEventListener('click', function(e){
       if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && e.target !== navToggle && !navToggle.contains(e.target)) {
-        mobileNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -497,10 +470,8 @@ footer.site{padding:0;border-top:1px solid var(--line);}
   var revealEls = document.querySelectorAll('[data-reveal]');
   if (!rm && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+      entries.forEach(function(entry){ if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     revealEls.forEach(function(el){ io.observe(el); });
   } else {
     revealEls.forEach(function(el){ el.classList.add('is-in'); });

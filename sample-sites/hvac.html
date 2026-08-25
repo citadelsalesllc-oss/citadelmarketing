@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow:wght@400;500;600&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&amp;family=Figtree:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -18,12 +18,7 @@
   "telephone": "+1-208-555-0187",
   "email": "service@alpinecomfortair.com",
   "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Post Falls",
-    "addressRegion": "ID",
-    "addressCountry": "US"
-  },
+  "address": {"@type": "PostalAddress", "addressLocality": "Post Falls", "addressRegion": "ID", "addressCountry": "US"},
   "areaServed": [
     {"@type": "City", "name": "Post Falls, ID"},
     {"@type": "City", "name": "Coeur d'Alene, ID"},
@@ -42,192 +37,191 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you repair both furnaces and air conditioners?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes — we service and repair furnaces, central AC, heat pumps, and ductless mini-split systems, plus install new equipment when a repair no longer makes sense."}
-    },
-    {
-      "@type": "Question",
-      "name": "What areas does Alpine Comfort Heating & Air serve?",
-      "acceptedAnswer": {"@type": "Answer", "text": "We serve homeowners in Post Falls, Coeur d'Alene, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area."}
-    },
-    {
-      "@type": "Question",
-      "name": "Is emergency heating or cooling service available?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes — a no-heat call in January or a dead AC in August doesn't wait for a Monday appointment. Call our main line any time for emergency dispatch."}
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer maintenance plans?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes — a twice-yearly tune-up plan (spring AC check, fall furnace check) catches small problems before they become a no-heat call in the middle of winter."}
-    }
+    {"@type": "Question", "name": "Do you repair both furnaces and air conditioners?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — we service and repair furnaces, central AC, heat pumps, and ductless mini-split systems, plus install new equipment when a repair no longer makes sense."}},
+    {"@type": "Question", "name": "What areas does Alpine Comfort Heating & Air serve?", "acceptedAnswer": {"@type": "Answer", "text": "We serve homeowners in Post Falls, Coeur d'Alene, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area."}},
+    {"@type": "Question", "name": "Is emergency heating or cooling service available?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — a no-heat call in January or a dead AC in August doesn't wait for a Monday appointment. Call our main line any time for emergency dispatch."}},
+    {"@type": "Question", "name": "Do you offer maintenance plans?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — a twice-yearly tune-up plan (spring AC check, fall furnace check) catches small problems before they become a no-heat call in the middle of winter."}}
   ]
 }
 </script>
 <style>
 :root{
-  --bg:#0a0a0a; --bg-2:#141414; --bg-3:#1d1d1d; --smoke:#181818;
-  --ink:#f6f6f5; --ink-soft:#b8b8b6; --ink-faint:#7a7a78;
-  --line:#2a2a2a; --line-strong:#404040;
-  --accent:#d9631f; --accent-hover:#b34f16; --accent-soft:rgba(217,99,31,0.16); --accent-text:#f0925a;
-  --accent2:#3aa0d9; --accent2-text:#6cc0ea;
-  --focus:#7fb6e8;
+  --bg:#fbfcfd; --panel:#f3f6f8;
+  --ink:#131a24; --ink-soft:#57667a; --ink-faint:#8a97a8;
+  --line:#e2e8ee; --line-strong:#c7d1db;
+  --heat:#e8551f; --heat-2:#ff7a3d; --heat-soft:#fdece3; --heat-ink:#8a2f0e;
+  --cool:#0e84c4; --cool-2:#37b6e8; --cool-soft:#e3f3fb; --cool-ink:#0b4f74;
+  --navy:#0d2436;
+  --focus:#0e84c4;
+  --radius:16px;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
-body{background:var(--bg);color:var(--ink);font-family:'Barlow',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.6;text-rendering:optimizeLegibility;}
+body{background:var(--bg);color:var(--ink);font-family:'Figtree',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.6;text-rendering:optimizeLegibility;}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
 img,svg{max-width:100%;display:block;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
 a{color:inherit;}
-h1,h2{font-family:'Anton',ui-sans-serif,sans-serif;font-weight:400;text-transform:uppercase;text-wrap:balance;margin:0;letter-spacing:0.01em;}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent-text);}
-.eyebrow::before{content:"";width:26px;height:1.5px;background:currentColor;display:inline-block;}
-.stroke{-webkit-text-stroke:1.5px var(--ink);color:transparent;}
+h1,h2,h3{font-family:'Baloo 2',ui-sans-serif,sans-serif;font-weight:700;text-wrap:balance;margin:0;color:var(--navy);}
+.mono{font-family:'Space Mono',ui-monospace,monospace;}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Space Mono',monospace;font-weight:700;font-size:12.5px;letter-spacing:0.04em;text-transform:uppercase;padding:5px 12px;border-radius:999px;}
+.eyebrow.heat{background:var(--heat-soft);color:var(--heat-ink);}
+.eyebrow.cool{background:var(--cool-soft);color:var(--cool-ink);}
+.eyebrow.neutral{background:var(--panel);color:var(--ink-soft);}
 
-.sample-bar{background:var(--accent);color:#fafafa;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;padding:7px 16px;}
+.sample-bar{background:var(--navy);color:#fff;text-align:center;font-family:'Space Mono',monospace;font-weight:400;font-size:11.5px;letter-spacing:0.04em;text-transform:uppercase;padding:7px 16px;}
+.promo-ribbon{background:linear-gradient(90deg, var(--heat), var(--heat-2) 45%, var(--cool-2) 55%, var(--cool));color:#fff;text-align:center;font-family:'Figtree',sans-serif;font-weight:700;font-size:13.5px;padding:10px 16px;}
 
-header.site{position:sticky;top:0;z-index:50;background:rgba(10,10,9,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
-.header-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
-.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;flex:0 0 auto;}
-.brand .b1{font-family:'Anton',sans-serif;font-size:19px;letter-spacing:0.02em;text-transform:uppercase;color:var(--ink);}
-.brand .b2{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);margin-top:3px;}
-nav.main{display:flex;align-items:center;gap:28px;}
-nav.main a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);}
-nav.main a:hover{color:var(--ink);}
-@media (max-width:840px){nav.main{display:none;}}
+header.site{position:sticky;top:0;z-index:50;background:rgba(251,252,253,0.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 0;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:0 0 auto;}
+.brand-mark{width:42px;height:42px;border-radius:50%;background:conic-gradient(from 180deg, var(--heat), var(--heat-2) 40%, var(--cool-2) 60%, var(--cool));display:flex;align-items:center;justify-content:center;flex:0 0 42px;padding:3px;}
+.brand-mark span{width:100%;height:100%;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--navy);font-family:'Baloo 2';font-weight:800;font-size:15px;}
+.brand-text{display:flex;flex-direction:column;line-height:1.05;}
+.brand-text .b1{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:20px;color:var(--navy);}
+.brand-text .b2{font-family:'Space Mono',monospace;font-weight:400;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:2px;}
+nav.main{display:flex;align-items:center;gap:26px;}
+nav.main a{font-family:'Figtree',sans-serif;font-weight:600;font-size:14.5px;text-decoration:none;color:var(--ink-soft);}
+nav.main a:hover{color:var(--heat);}
+@media (max-width:900px){nav.main{display:none;}}
 .header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
-.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);border-radius:2px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);flex:0 0 auto;}
-.nav-toggle:hover{border-color:var(--ink);}
+.nav-toggle{display:none;background:none;border:1.5px solid var(--line-strong);border-radius:999px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--navy);flex:0 0 auto;}
 .nav-toggle svg{width:20px;height:20px;}
 .nav-toggle .icon-close{display:none;}
 .nav-toggle[aria-expanded="true"] .icon-open{display:none;}
 .nav-toggle[aria-expanded="true"] .icon-close{display:block;}
-@media (max-width:840px){.nav-toggle{display:flex;} .header-row .btn-primary{display:none;}}
-.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,0.35);}
+@media (max-width:900px){.nav-toggle{display:flex;} .header-row .btn-primary{display:none;}}
+.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(13,36,54,0.12);}
 .mobile-nav.open{display:block;}
 .mobile-nav .wrap{display:flex;flex-direction:column;padding:4px 24px 20px;gap:0;}
-.mobile-nav a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);padding:14px 0;border-top:1px solid var(--line);}
-.mobile-nav a:hover{color:var(--ink);}
+.mobile-nav a{font-family:'Figtree',sans-serif;font-weight:600;font-size:16px;text-decoration:none;color:var(--ink-soft);padding:14px 0;border-top:1px solid var(--line);}
 .mobile-nav .btn{margin-top:14px;width:100%;}
-@media (min-width:841px){.mobile-nav{display:none !important;}}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:0.03em;text-transform:uppercase;padding:12px 22px;border-radius:2px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;}
-.btn-primary{background:var(--accent);color:#fafafa;border-color:var(--accent);}
-.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong);}
-.btn-ghost:hover{border-color:var(--ink);}
+@media (min-width:901px){.mobile-nav{display:none !important;}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Figtree',sans-serif;font-weight:700;font-size:15px;padding:13px 24px;border-radius:999px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;}
+.btn-primary{background:var(--heat);color:#fff;border-color:var(--heat);}
+.btn-primary:hover{background:var(--heat-ink);border-color:var(--heat-ink);}
+.btn-ghost{background:transparent;color:var(--navy);border-color:var(--line-strong);}
+.btn-ghost:hover{border-color:var(--navy);}
 .btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
 
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:64px 0;}
-.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 82% 15%, var(--accent-soft), transparent 55%), radial-gradient(circle at 15% 85%, rgba(58,160,217,0.12), transparent 50%), var(--bg);}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center;}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+.hero{position:relative;overflow:hidden;padding:60px 0 0;}
+.hero-wash{position:absolute;inset:0;z-index:0;}
+.hero-wash i{position:absolute;inset:0;display:block;}
+.hero-wash .h1{background:var(--heat);opacity:0.05;clip-path:polygon(0 0, 58% 0, 34% 100%, 0 100%);}
+.hero-wash .h2{background:var(--cool);opacity:0.06;clip-path:polygon(58% 0,100% 0,100% 100%,34% 100%);}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;padding:32px 0 56px;}
+.hero-grid > *{min-width:0;}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;}}
 .hero-head{display:flex;flex-direction:column;gap:18px;}
-.hero-head h1{font-size:clamp(34px,6vw,64px);line-height:0.98;}
-.hero-lede{font-size:17px;color:var(--ink-soft);max-width:520px;}
+.hero-head h1{font-size:clamp(32px,5.4vw,58px);line-height:1.02;}
+.split-word{background:linear-gradient(90deg, var(--heat), var(--cool));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero-lede{font-size:17px;color:var(--ink-soft);max-width:480px;}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px;}
-.hero-art{display:flex;align-items:center;justify-content:center;padding:20px;}
-.hero-art svg{width:100%;max-width:380px;height:auto;}
-@media (max-width:900px){.hero-art{display:none;}}
-
-.stats{border-bottom:1px solid var(--line);background:var(--bg-2);}
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);}
-@media (max-width:760px){.stats-row{grid-template-columns:repeat(2,1fr);}}
-.stat{padding:30px 24px;border-left:1px solid var(--line);}
-.stat:first-child{border-left:none;}
-@media (max-width:760px){.stat:nth-child(odd){border-left:none;} .stat:nth-child(n+3){border-top:1px solid var(--line);}}
-.stat .num{font-family:'Anton',sans-serif;font-size:clamp(24px,3vw,34px);line-height:1;color:var(--accent-text);}
-.stat .label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.03em;text-transform:uppercase;margin-top:8px;}
-.stat .sub{font-size:12px;color:var(--ink-soft);margin-top:2px;}
+.dial-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.dial-wrap svg{width:min(280px,80vw);height:auto;}
+.dial-caption{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);}
 
 .section{padding:76px 0;}
-.section-head{max-width:680px;margin-bottom:40px;}
-.section-head h2{font-size:clamp(28px,3.8vw,42px);margin:10px 0 12px;}
+.section-head{max-width:640px;margin-bottom:36px;}
+.section-head h2{font-size:clamp(26px,3.4vw,38px);margin:10px 0 12px;}
 .section-head p{color:var(--ink-soft);font-size:16px;margin:0;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
 
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-@media (max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:600px){.svc-grid{grid-template-columns:1fr;}}
-.svc-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:26px 24px;transition:border-color .2s ease;}
-.svc-card:hover{border-color:var(--ink-soft);}
-.svc-icon{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--accent-text);margin-bottom:16px;}
-.svc-card.cool .svc-icon{color:var(--accent2-text);}
-.svc-icon svg{width:22px;height:22px;}
-.svc-card h3{font-family:'Barlow',sans-serif;font-weight:600;font-size:18px;margin:0 0 8px;}
-.svc-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+.hc-split{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media (max-width:800px){.hc-split{grid-template-columns:1fr;}}
+.hc-panel{border-radius:var(--radius);padding:30px 28px;min-width:0;}
+.hc-panel.heat{background:var(--heat-soft);}
+.hc-panel.cool{background:var(--cool-soft);}
+.hc-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.hc-head .ic{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 44px;}
+.hc-panel.heat .ic{background:var(--heat);color:#fff;}
+.hc-panel.cool .ic{background:var(--cool);color:#fff;}
+.hc-head .ic svg{width:22px;height:22px;}
+.hc-head h3{font-size:22px;text-transform:uppercase;}
+.hc-panel.heat h3{color:var(--heat-ink);}
+.hc-panel.cool h3{color:var(--cool-ink);}
+.hc-item{display:flex;gap:12px;padding:14px 0;border-top:1px solid rgba(0,0,0,0.08);}
+.hc-item:first-of-type{border-top:none;}
+.hc-item h4{margin:0 0 3px;font-family:'Figtree',sans-serif;font-weight:700;font-size:16px;color:var(--navy);}
+.hc-item p{margin:0;font-size:13.5px;color:var(--ink-soft);}
 
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-@media (max-width:860px){.trust-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:520px){.trust-grid{grid-template-columns:1fr;}}
-.trust-card{border-top:1px solid var(--line);padding-top:16px;}
-.trust-num{font-family:'Anton',sans-serif;font-size:14px;letter-spacing:0.04em;color:var(--accent-text);}
-.trust-card h3{font-family:'Anton',sans-serif;font-size:18px;letter-spacing:0.03em;text-transform:uppercase;margin:8px 0 8px;}
-.trust-card p{color:var(--ink-soft);font-size:14px;margin:0;line-height:1.55;}
+.financing-band{background:var(--navy);color:#fff;padding:36px 0;}
+.financing-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.financing-row h3{color:#fff;font-size:clamp(20px,2.6vw,28px);margin:0;text-transform:none;}
+.financing-row p{margin:4px 0 0;color:#a9bdd0;font-size:14px;}
+.financing-row .btn-primary{flex:0 0 auto;}
 
-.areas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
-@media (max-width:900px){.areas-grid{grid-template-columns:repeat(3,1fr);}}
-@media (max-width:600px){.areas-grid{grid-template-columns:1fr 1fr;}}
-.area-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:20px 18px;}
-.area-card h3{font-family:'Anton',sans-serif;font-size:16px;letter-spacing:0.03em;text-transform:uppercase;margin:0 0 6px;}
-.area-card p{color:var(--ink-soft);font-size:13px;margin:0;}
+.pill-row{display:flex;flex-wrap:wrap;gap:14px;}
+.pill-stat{display:flex;align-items:center;gap:12px;background:var(--panel);border-radius:999px;padding:10px 22px 10px 10px;flex:1 1 220px;}
+.pill-stat .circ{width:46px;height:46px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 46px;font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--heat);box-shadow:0 2px 6px rgba(13,36,54,0.08);}
+.pill-stat .tx b{display:block;font-family:'Figtree',sans-serif;font-weight:700;font-size:14.5px;color:var(--navy);}
+.pill-stat .tx span{font-size:12.5px;color:var(--ink-soft);}
 
-.gallery-note{max-width:680px;margin:0 0 32px;font-size:13.5px;color:var(--ink-faint);border:1px dashed var(--line-strong);padding:10px 16px;border-radius:2px;}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-@media (max-width:900px){.review-grid{grid-template-columns:1fr;}}
-.review-card{background:var(--bg-2);border:1px solid var(--line);border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:14px;}
-.review-stars{color:var(--accent-text);font-size:14px;letter-spacing:2px;}
-.review-card p{font-size:14.5px;color:var(--ink-soft);margin:0;line-height:1.6;}
-.review-name{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);}
+.chip-cloud{display:flex;flex-wrap:wrap;gap:12px;}
+.chip{background:#fff;border:1.5px solid var(--line-strong);border-radius:999px;padding:12px 20px;font-family:'Figtree',sans-serif;font-weight:600;font-size:14px;color:var(--navy);display:flex;align-items:center;gap:8px;}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--cool);}
+.chip:nth-child(even) .dot{background:var(--heat);}
+
+.bubble-strip{display:flex;gap:18px;overflow-x:auto;padding:6px 6px 16px;scroll-snap-type:x mandatory;}
+.bubble{scroll-snap-align:start;flex:0 0 300px;background:#fff;border:1.5px solid var(--line);border-radius:20px 20px 20px 4px;padding:22px;box-shadow:0 8px 20px rgba(13,36,54,0.06);}
+.bubble .stars{color:var(--heat);font-size:13px;letter-spacing:1.5px;margin-bottom:10px;}
+.bubble p{font-size:14px;color:var(--ink-soft);margin:0 0 14px;line-height:1.6;}
+.bubble .who{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-faint);}
+.gallery-note{max-width:680px;margin:0 0 24px;font-size:13px;color:var(--ink-faint);}
 
 .faq-list{max-width:760px;}
 .faq-item{border-top:1px solid var(--line);padding:20px 0;}
 .faq-item:last-child{border-bottom:1px solid var(--line);}
-.faq-item h3{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:18px;letter-spacing:0.01em;margin:0 0 8px;}
+.faq-item h3{font-family:'Figtree',sans-serif;font-weight:700;font-size:17px;margin:0 0 8px;text-transform:none;}
 .faq-item p{color:var(--ink-soft);font-size:15px;margin:0;max-width:640px;}
 
-.cta-band{position:relative;background:var(--bg);border-top:1px solid var(--line);overflow:hidden;text-align:center;padding:88px 0;}
-.cta-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Anton',sans-serif;font-size:clamp(4rem,15vw,13rem);line-height:1;letter-spacing:-0.02em;text-transform:uppercase;white-space:nowrap;-webkit-text-stroke:1px var(--line-strong);color:transparent;pointer-events:none;user-select:none;z-index:0;}
+.cta-band{position:relative;overflow:hidden;background:var(--navy);color:#fff;text-align:center;padding:80px 0;}
+.cta-band .wash{position:absolute;inset:0;background:linear-gradient(120deg, rgba(232,85,31,0.28), transparent 40%, rgba(14,132,196,0.28));}
 .cta-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
-.cta-inner h2{font-size:clamp(28px,5vw,52px);margin:10px 0 16px;}
-.cta-inner p{color:var(--ink-soft);font-size:16px;max-width:480px;margin:0 auto 30px;}
+.cta-inner h2{color:#fff;font-size:clamp(28px,4.6vw,46px);margin:10px 0 16px;}
+.cta-inner p{color:#a9bdd0;font-size:16px;max-width:480px;margin:0 auto 30px;}
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cta-band .btn-ghost{color:#fff;border-color:rgba(255,255,255,0.35);}
+.cta-band .btn-ghost:hover{border-color:#fff;}
 
-footer.site{padding:0;border-top:1px solid var(--line);}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding:40px 0 28px;}
+footer.site{background:#0a1c2b;color:#a9bdd0;padding:0;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;padding:48px 0 28px;}
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
 @media (max-width:480px){.foot-grid{grid-template-columns:1fr;}}
 .foot-col{display:flex;flex-direction:column;gap:9px;}
-.foot-col b{font-family:'Anton',sans-serif;font-size:16px;text-transform:uppercase;}
-.foot-brand p{color:var(--ink-soft);font-size:13px;line-height:1.6;margin:6px 0 4px;max-width:320px;}
-.foot-head{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:2px;}
-.foot-col a{color:var(--ink-soft);font-size:13px;text-decoration:none;}
-.foot-col a:hover{color:var(--ink);}
-.foot-plain{color:var(--ink-faint);font-size:12px;}
-.foot-bottom{border-top:1px solid var(--line);padding:16px 0;font-size:12px;color:var(--ink-faint);}
+.foot-col b{font-family:'Baloo 2',sans-serif;font-size:19px;color:#fff;}
+.foot-brand p{color:#8ba0b5;font-size:13px;line-height:1.6;margin:6px 0 4px;max-width:300px;}
+.foot-head{font-family:'Space Mono',monospace;font-weight:400;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#5f7488;margin-bottom:2px;}
+.foot-col a{color:#a9bdd0;font-size:13.5px;text-decoration:none;}
+.foot-col a:hover{color:var(--heat-2);}
+.foot-plain{color:#5f7488;font-size:12.5px;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:16px 0;font-size:12px;color:#5f7488;}
 .foot-bottom .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 
-.floating-cta{position:fixed;right:20px;bottom:20px;z-index:500;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fafafa;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.03em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,0.4);transition:background .2s ease, transform .2s ease;}
-.floating-cta:hover{background:var(--accent-hover);transform:translateY(-2px);}
-.floating-cta .fc-dot{width:7px;height:7px;border-radius:50%;background:#fafafa;animation:pulse 1.8s ease-in-out infinite;flex:0 0 7px;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.25;}}
-@media (max-width:840px){.floating-cta{right:14px;bottom:14px;padding:12px 18px;font-size:13px;}}
+.floating-cta{position:fixed;right:20px;bottom:20px;z-index:500;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg, var(--heat), var(--cool));color:#fff;font-family:'Figtree',sans-serif;font-weight:700;font-size:14.5px;text-decoration:none;padding:14px 22px;border-radius:999px;box-shadow:0 10px 26px rgba(13,36,54,0.3);transition:transform .2s ease;}
+.floating-cta:hover{transform:translateY(-2px);}
+@media (max-width:900px){.floating-cta{right:14px;bottom:14px;padding:12px 18px;font-size:13px;}}
 
-[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.68,.18,1), transform .7s cubic-bezier(.2,.68,.18,1);}
+[data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
 [data-reveal].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}}
 </style>
 </head>
 <body>
 <div class="sample-bar">Concept Site — Portfolio Sample by Citadel Sales &amp; Marketing, Not a Live Business</div>
+<div class="promo-ribbon">Fall Tune-Up Special — $89 Furnace Check + Free Filter Through October</div>
 <header class="site">
   <div class="wrap header-row">
     <a class="brand" href="#top">
-      <span class="b1">Alpine Comfort</span>
-      <span class="b2">Heating &amp; Air</span>
+      <span class="brand-mark"><span>AC</span></span>
+      <span class="brand-text">
+        <span class="b1">Alpine Comfort</span>
+        <span class="b2">Heating &amp; Air</span>
+      </span>
     </a>
     <nav class="main">
-      <a href="#services">Services</a>
+      <a href="#services">Heating &amp; Cooling</a>
       <a href="#why-us">Why Us</a>
       <a href="#areas">Service Area</a>
       <a href="#reviews">Reviews</a>
@@ -235,7 +229,7 @@ footer.site{padding:0;border-top:1px solid var(--line);}
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary" href="tel:12085550187">Call Now</a>
+      <a class="btn btn-primary" href="tel:12085550187">Book a Visit</a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -244,185 +238,142 @@ footer.site{padding:0;border-top:1px solid var(--line);}
   </div>
   <div class="mobile-nav" id="mobileNav">
     <div class="wrap">
-      <a href="#services">Services</a>
+      <a href="#services">Heating &amp; Cooling</a>
       <a href="#why-us">Why Us</a>
       <a href="#areas">Service Area</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn-primary" href="tel:12085550187">208.555.0187 &mdash; Call Now</a>
+      <a class="btn btn-primary" href="tel:12085550187">208.555.0187 &mdash; Book a Visit</a>
     </div>
   </div>
 </header>
 
 <main>
 <section class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-wash" aria-hidden="true"><i class="h1"></i><i class="h2"></i></div>
   <div class="wrap hero-grid">
     <div class="hero-head">
-      <p class="eyebrow" data-reveal>24/7 Heating &amp; Cooling &mdash; North Idaho</p>
-      <h1 data-reveal>Warm Winters.<br><span class="stroke">Cool Summers. Year-Round.</span></h1>
+      <p class="eyebrow neutral" data-reveal>24/7 Heating &amp; Cooling &mdash; North Idaho</p>
+      <h1 data-reveal>Warm Winters. <span class="split-word">Cool Summers.</span> Year&#8209;Round.</h1>
       <p class="hero-lede" data-reveal>Furnace out in January or AC dead in August &mdash; either way, you need it fixed today, not next week. Licensed heating and cooling service for homeowners in Post Falls, Coeur d&rsquo;Alene, and North Idaho.</p>
       <div class="hero-ctas" data-reveal>
         <a class="btn btn-primary" href="tel:12085550187">208.555.0187 &mdash; Call Now</a>
         <a class="btn btn-ghost" href="#contact">Request a Free Estimate</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 200 200" fill="none">
-        <circle cx="100" cy="100" r="98" stroke="var(--line-strong)" stroke-opacity="0.6" stroke-width="1"/>
-        <g stroke="var(--accent-text)" stroke-width="3.2" stroke-linecap="round">
-          <path d="M60 60c8 14 8 26 0 40M60 60c14-8 26-8 40 0M60 100c8-14 8-26 0-40"/>
-        </g>
-        <path d="M60 50v60M35 60l50 40M85 60l-50 40" stroke="var(--accent2-text)" stroke-width="3" stroke-linecap="round" transform="translate(50 15) scale(0.55)"/>
-        <path d="M60 45v70M32 62l56 36M88 62l-56 36" stroke="var(--accent2-text)" stroke-width="4" stroke-linecap="round" transform="translate(70 40) scale(0.75)"/>
-        <path d="M140 120c-10 6-16 16-16 27a16 16 0 0 0 32 0c0-11-6-21-16-27Z" fill="var(--accent-text)" fill-opacity="0.9"/>
-        <path d="M140 108c-6 4-10 10-10 17a10 10 0 0 0 20 0c0-7-4-13-10-17Z" fill="var(--accent-text)" fill-opacity="0.55"/>
+    <div class="dial-wrap" data-reveal>
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="var(--line)" stroke-width="16"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="var(--heat)" stroke-width="16" stroke-linecap="round" stroke-dasharray="251.2 502.4" stroke-dashoffset="0" transform="rotate(-90 100 100)"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="var(--cool)" stroke-width="16" stroke-linecap="round" stroke-dasharray="251.2 502.4" stroke-dashoffset="-251.2" transform="rotate(-90 100 100)"/>
+        <text x="100" y="96" text-anchor="middle" font-family="Space Mono, monospace" font-size="34" font-weight="700" fill="var(--navy)">72&#176;</text>
+        <text x="100" y="118" text-anchor="middle" font-family="Space Mono, monospace" font-size="10" letter-spacing="1" fill="var(--ink-faint)">COMFORT ZONE</text>
       </svg>
+      <span class="dial-caption">Heat side &middot; Cool side, one crew</span>
     </div>
   </div>
 </section>
-
-<div class="stats">
-  <div class="wrap stats-row">
-    <div class="stat"><div class="num">24/7</div><div class="label">Emergency Service</div><div class="sub">Heat or AC down, any time</div></div>
-    <div class="stat"><div class="num">100%</div><div class="label">Licensed &amp; Insured</div><div class="sub">Idaho HVAC contractor</div></div>
-    <div class="stat"><div class="num">Free</div><div class="label">Written Estimates</div><div class="sub">On repairs &amp; new installs</div></div>
-    <div class="stat"><div class="num">2x</div><div class="label">Annual Tune-Ups</div><div class="sub">Spring AC + fall furnace check</div></div>
-  </div>
-</div>
 
 <section class="section" id="services">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-reveal>What We Do</p>
+      <p class="eyebrow neutral" data-reveal>What We Do</p>
       <h2 data-reveal>Heating &amp; Cooling, Handled By One Crew.</h2>
       <p>One call for furnace trouble, AC trouble, or a system that&rsquo;s just old and tired.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c1.5 3 3 5 3 7.5a3 3 0 1 1-6 0C9 8 10.5 6 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 16h8v3a4 4 0 0 1-8 0v-3Z" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <h3>Furnace Repair &amp; Install</h3>
-        <p>No-heat calls, strange noises, and full replacements &mdash; gas and electric systems.</p>
+    <div class="hc-split">
+      <div class="hc-panel heat" data-reveal>
+        <div class="hc-head"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c1.5 3 3 5 3 7.5a3 3 0 1 1-6 0C9 8 10.5 6 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><h3>Heating</h3></div>
+        <div class="hc-item"><h4>Furnace Repair &amp; Install</h4><p>No-heat calls, strange noises, and full replacements &mdash; gas and electric systems.</p></div>
+        <div class="hc-item"><h4>Heat Pump Service</h4><p>One system, year-round &mdash; installed, tuned, and repaired for our winters.</p></div>
+        <div class="hc-item"><h4>Emergency No-Heat Calls</h4><p>A cold house at 11pm doesn&rsquo;t wait for Monday. Same number, day or night.</p></div>
       </div>
-      <div class="svc-card cool" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>AC Repair &amp; Install</h3>
-        <p>Central air not keeping up? Repairs, recharges, and full system installs.</p>
-      </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-4-4-7-7.5-7-11.5A7 7 0 0 1 19 9.5C19 13.5 16 17 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 10l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Heat Pump Service</h3>
-        <p>One system, year-round &mdash; installed, tuned, and repaired for our North Idaho winters.</p>
-      </div>
-      <div class="svc-card cool" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="10" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M8 11h.01M12 11h.01M16 11h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <h3>Ductless Mini-Split Systems</h3>
-        <p>Zoned heating and cooling for additions, shops, and rooms the main system can&rsquo;t reach.</p>
-      </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Maintenance Plans</h3>
-        <p>Twice-yearly tune-ups that catch a small problem before it becomes a January no-heat call.</p>
-      </div>
-      <div class="svc-card" data-reveal>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Emergency HVAC (24/7)</h3>
-        <p>No heat in a cold snap doesn&rsquo;t wait for Monday. Same number, day or night.</p>
+      <div class="hc-panel cool" data-reveal>
+        <div class="hc-head"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Cooling</h3></div>
+        <div class="hc-item"><h4>AC Repair &amp; Install</h4><p>Central air not keeping up? Repairs, recharges, and full system installs.</p></div>
+        <div class="hc-item"><h4>Ductless Mini-Splits</h4><p>Zoned cooling for additions, shops, and rooms the main system can&rsquo;t reach.</p></div>
+        <div class="hc-item"><h4>Maintenance Plans</h4><p>Twice-yearly tune-ups that catch a small problem before it becomes a big one.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="why-us" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+<div class="financing-band">
+  <div class="wrap financing-row" data-reveal>
+    <div>
+      <h3>$0 Down Financing Available</h3>
+      <p>Ask about rebates up to $1,200 on qualifying furnace and heat pump installs.</p>
+    </div>
+    <a class="btn btn-primary" href="#contact">Ask About Financing</a>
+  </div>
+</div>
+
+<section class="section" id="why-us">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-reveal>Why Homeowners Call Us</p>
+      <p class="eyebrow heat" data-reveal>Why Homeowners Call Us</p>
       <h2 data-reveal>Comfort You Can Count On.</h2>
     </div>
-    <div class="trust-grid">
-      <div class="trust-card" data-reveal><span class="trust-num">01</span><h3>Licensed &amp; Insured</h3><p>Fully licensed Idaho HVAC contractor, insured for work in your home.</p></div>
-      <div class="trust-card" data-reveal><span class="trust-num">02</span><h3>Upfront Pricing</h3><p>Every repair and install is quoted before we start &mdash; no surprises at the end.</p></div>
-      <div class="trust-card" data-reveal><span class="trust-num">03</span><h3>Locally Owned</h3><p>Based in Post Falls, not a national franchise routing you to a subcontractor.</p></div>
-      <div class="trust-card" data-reveal><span class="trust-num">04</span><h3>Any System, Any Age</h3><p>We service most major furnace, AC, and heat pump brands &mdash; not just what we sell.</p></div>
+    <div class="pill-row">
+      <div class="pill-stat" data-reveal><span class="circ">24/7</span><span class="tx"><b>Emergency Service</b><span>Heat or AC down, any time</span></span></div>
+      <div class="pill-stat" data-reveal><span class="circ">100%</span><span class="tx"><b>Licensed &amp; Insured</b><span>Idaho HVAC contractor</span></span></div>
+      <div class="pill-stat" data-reveal><span class="circ">Free</span><span class="tx"><b>Written Estimates</b><span>On repairs &amp; new installs</span></span></div>
+      <div class="pill-stat" data-reveal><span class="circ">2x</span><span class="tx"><b>Annual Tune-Ups</b><span>Spring AC + fall furnace check</span></span></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="areas">
+<section class="section" id="areas" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-reveal>Where We Work</p>
+      <p class="eyebrow cool" data-reveal>Where We Work</p>
       <h2 data-reveal>Serving Homeowners Across North Idaho.</h2>
     </div>
-    <div class="areas-grid">
-      <div class="area-card" data-reveal><h3>Post Falls</h3><p>Home base &mdash; fastest response times.</p></div>
-      <div class="area-card" data-reveal><h3>Coeur d&rsquo;Alene</h3><p>Same-day service available.</p></div>
-      <div class="area-card" data-reveal><h3>Hayden</h3><p>Residential repair &amp; install.</p></div>
-      <div class="area-card" data-reveal><h3>Rathdrum</h3><p>Full-service coverage.</p></div>
-      <div class="area-card" data-reveal><h3>Spokane, WA</h3><p>Serving the greater metro area.</p></div>
+    <div class="chip-cloud" data-reveal>
+      <span class="chip"><span class="dot"></span>Post Falls &mdash; home base</span>
+      <span class="chip"><span class="dot"></span>Coeur d&rsquo;Alene &mdash; same-day</span>
+      <span class="chip"><span class="dot"></span>Hayden</span>
+      <span class="chip"><span class="dot"></span>Rathdrum</span>
+      <span class="chip"><span class="dot"></span>Spokane, WA</span>
     </div>
   </div>
 </section>
 
-<section class="section" id="reviews" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+<section class="section" id="reviews">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-reveal>What Homeowners Say</p>
+      <p class="eyebrow neutral" data-reveal>What Homeowners Say</p>
       <h2 data-reveal>Reviews From The Neighborhood.</h2>
     </div>
     <p class="gallery-note">Sample review format for portfolio purposes &mdash; illustrates how a real Google review feed would display on the live site.</p>
-    <div class="review-grid">
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;Furnace quit on the coldest night of the year and they had someone out within a couple hours. Explained the fix before doing it.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Post Falls, ID</div>
-      </div>
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;AC died in the middle of a heat wave. Fast callback, fair quote, fixed same day. Signed up for the tune-up plan on the spot.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Coeur d&rsquo;Alene, ID</div>
-      </div>
-      <div class="review-card" data-reveal>
-        <div class="review-stars">★★★★★</div>
-        <p>&ldquo;Put in a mini-split for our shop. Clean install, walked us through how to run it, no pressure to buy anything extra.&rdquo;</p>
-        <div class="review-name">Sample Review &mdash; Hayden, ID</div>
-      </div>
+    <div class="bubble-strip" data-reveal>
+      <div class="bubble"><div class="stars">★★★★★</div><p>&ldquo;Furnace quit on the coldest night of the year and they had someone out within a couple hours. Explained the fix before doing it.&rdquo;</p><div class="who">Sample Review &mdash; Post Falls, ID</div></div>
+      <div class="bubble"><div class="stars">★★★★★</div><p>&ldquo;AC died in the middle of a heat wave. Fast callback, fair quote, fixed same day. Signed up for the tune-up plan on the spot.&rdquo;</p><div class="who">Sample Review &mdash; Coeur d&rsquo;Alene, ID</div></div>
+      <div class="bubble"><div class="stars">★★★★★</div><p>&ldquo;Put in a mini-split for our shop. Clean install, walked us through how to run it, no pressure to buy anything extra.&rdquo;</p><div class="who">Sample Review &mdash; Hayden, ID</div></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="faq">
+<section class="section" id="faq" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-reveal>Questions</p>
+      <p class="eyebrow neutral" data-reveal>Questions</p>
       <h2 data-reveal>Frequently Asked Questions.</h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item" data-reveal>
-        <h3>Do you repair both furnaces and air conditioners?</h3>
-        <p>Yes &mdash; we service and repair furnaces, central AC, heat pumps, and ductless mini-split systems, plus install new equipment when a repair no longer makes sense.</p>
-      </div>
-      <div class="faq-item" data-reveal>
-        <h3>What areas does Alpine Comfort Heating &amp; Air serve?</h3>
-        <p>We serve homeowners in Post Falls, Coeur d&rsquo;Alene, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area.</p>
-      </div>
-      <div class="faq-item" data-reveal>
-        <h3>Is emergency heating or cooling service available?</h3>
-        <p>Yes &mdash; a no-heat call in January or a dead AC in August doesn&rsquo;t wait for a Monday appointment. Call our main line any time for emergency dispatch.</p>
-      </div>
-      <div class="faq-item" data-reveal>
-        <h3>Do you offer maintenance plans?</h3>
-        <p>Yes &mdash; a twice-yearly tune-up plan (spring AC check, fall furnace check) catches small problems before they become a no-heat call in the middle of winter.</p>
-      </div>
+      <div class="faq-item" data-reveal><h3>Do you repair both furnaces and air conditioners?</h3><p>Yes &mdash; we service and repair furnaces, central AC, heat pumps, and ductless mini-split systems, plus install new equipment when a repair no longer makes sense.</p></div>
+      <div class="faq-item" data-reveal><h3>What areas does Alpine Comfort Heating &amp; Air serve?</h3><p>We serve homeowners in Post Falls, Coeur d&rsquo;Alene, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area.</p></div>
+      <div class="faq-item" data-reveal><h3>Is emergency heating or cooling service available?</h3><p>Yes &mdash; a no-heat call in January or a dead AC in August doesn&rsquo;t wait for a Monday appointment. Call our main line any time for emergency dispatch.</p></div>
+      <div class="faq-item" data-reveal><h3>Do you offer maintenance plans?</h3><p>Yes &mdash; a twice-yearly tune-up plan (spring AC check, fall furnace check) catches small problems before they become a no-heat call in the middle of winter.</p></div>
     </div>
   </div>
 </section>
 
 <section class="cta-band" id="contact">
-  <span class="cta-ghost">Alpine Comfort</span>
+  <div class="wash" aria-hidden="true"></div>
   <div class="wrap cta-inner">
-    <p class="eyebrow" style="justify-content:center;" data-reveal>Get Comfortable</p>
+    <p class="eyebrow neutral" style="justify-content:center;background:rgba(255,255,255,0.1);color:#fff;" data-reveal>Get Comfortable</p>
     <h2 data-reveal>Too Hot? Too Cold? Let&rsquo;s Fix It.</h2>
     <p>Tell us what your system&rsquo;s doing and we&rsquo;ll get back to you fast with a straight answer and a fair price.</p>
     <div class="cta-row">
@@ -444,7 +395,7 @@ footer.site{padding:0;border-top:1px solid var(--line);}
       <a href="#services">Furnace Repair</a>
       <a href="#services">AC Repair &amp; Install</a>
       <a href="#services">Heat Pumps</a>
-      <a href="#services">Emergency HVAC</a>
+      <a href="#services">Ductless Mini-Splits</a>
     </div>
     <div class="foot-col">
       <span class="foot-head">Service Area</span>
@@ -467,7 +418,7 @@ footer.site{padding:0;border-top:1px solid var(--line);}
     </div>
   </div>
 </footer>
-<a class="floating-cta" href="tel:12085550187" aria-label="Call Alpine Comfort Heating &amp; Air — 208.555.0187"><span class="fc-dot"></span>Call Now</a>
+<a class="floating-cta" href="tel:12085550187" aria-label="Call Alpine Comfort Heating &amp; Air — 208.555.0187">Call Now</a>
 
 <script>
 (function(){
@@ -479,15 +430,11 @@ footer.site{padding:0;border-top:1px solid var(--line);}
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     mobileNav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        mobileNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      a.addEventListener('click', function(){ mobileNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
     });
     document.addEventListener('click', function(e){
       if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && e.target !== navToggle && !navToggle.contains(e.target)) {
-        mobileNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -495,10 +442,8 @@ footer.site{padding:0;border-top:1px solid var(--line);}
   var revealEls = document.querySelectorAll('[data-reveal]');
   if (!rm && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+      entries.forEach(function(entry){ if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     revealEls.forEach(function(el){ io.observe(el); });
   } else {
     revealEls.forEach(function(el){ el.classList.add('is-in'); });
