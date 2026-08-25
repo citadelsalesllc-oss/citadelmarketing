@@ -161,6 +161,13 @@ nav.main a:hover{color:var(--blue);}
 @media (max-width:700px){.svc-row{grid-template-columns:48px 1fr;}.svc-arrow{display:none;}}
 .svc-view-all{margin-top:28px;text-align:center;}
 
+.stat-teaser-row{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);}
+.stat-teaser{flex:1 1 200px;padding:20px 0;border-left:1px solid var(--line-strong);padding-left:20px;}
+.stat-teaser:first-child{border-left:none;padding-left:0;}
+@media (max-width:600px){.stat-teaser{border-left:none;padding-left:0;flex:1 1 45%;}}
+
+.contact-badge{border:1px solid var(--line-strong);color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.04em;text-transform:uppercase;padding:6px 13px;border-radius:20px;background:#fff;}
+
 .why-split{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
 @media (max-width:860px){.why-split{grid-template-columns:1fr;gap:32px;}}
 .why-stats{display:flex;flex-direction:column;gap:0;}
@@ -250,7 +257,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
 </div>
 <header class="site">
   <div class="wrap header-row">
-    <a class="brand" href="#top">
+    <a class="brand" href="plumbing.html">
       <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3 4-6 8-6 11.5A6 6 0 0 0 12 21a6 6 0 0 0 6-6.5C18 11 15 7 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
       <span class="brand-text">
         <span class="b1">Ridgeline</span>
@@ -259,11 +266,11 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
     </a>
     <nav class="main">
       <a href="plumbing-services.html">Services</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#areas">Coverage</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="plumbing-why-us.html">Why Us</a>
+      <a href="plumbing-coverage.html">Coverage</a>
+      <a href="plumbing-reviews.html">Reviews</a>
+      <a href="plumbing-faq.html">FAQ</a>
+      <a href="plumbing-contact.html">Contact</a>
     </nav>
     <div class="header-actions">
       <a class="btn btn-primary" href="tel:12085550142">Call Now</a>
@@ -276,11 +283,11 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
   <div class="mobile-nav" id="mobileNav">
     <div class="wrap">
       <a href="plumbing-services.html">Services</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#areas">Coverage</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="plumbing-why-us.html">Why Us</a>
+      <a href="plumbing-coverage.html">Coverage</a>
+      <a href="plumbing-reviews.html">Reviews</a>
+      <a href="plumbing-faq.html">FAQ</a>
+      <a href="plumbing-contact.html">Contact</a>
       <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call Now</a>
     </div>
   </div>
@@ -297,7 +304,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       <div class="hero-stars" data-reveal><span class="stars">★★★★★</span> Sample rating format &mdash; 4.9 avg. from local reviews</div>
       <div class="hero-ctas" data-reveal>
         <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call Now</a>
-        <a class="btn btn-ghost" href="#contact">Request an Estimate</a>
+        <a class="btn btn-ghost" href="plumbing-contact.html">Request an Estimate</a>
       </div>
     </div>
     <div data-reveal>
@@ -369,17 +376,13 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       <p class="eyebrow" data-reveal>Why Homeowners Call Us</p>
       <h2 data-reveal>Straight Answers. Fair Prices.</h2>
     </div>
-    <div class="why-split">
-      <div class="why-stats">
-        <div class="why-stat" data-reveal><div class="n">24/7</div><div class="l">Emergency Response</div></div>
-        <div class="why-stat" data-reveal><div class="n">$0</div><div class="l">Trip Charge For Estimates</div></div>
-        <div class="why-stat" data-reveal><div class="n">100%</div><div class="l">Licensed Idaho Contractor</div></div>
-      </div>
-      <div class="check-list">
-        <div class="check-item" data-reveal><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Upfront Flat-Rate Pricing</h4><p>You approve the price before we start &mdash; no hourly surprises on the final bill.</p></div></div>
-        <div class="check-item" data-reveal><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Locally Owned, Not A Franchise</h4><p>Based in Coeur d&rsquo;Alene &mdash; you talk to the person doing the work, not a call center.</p></div></div>
-        <div class="check-item" data-reveal><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Clean, Respectful Work</h4><p>Boot covers, drop cloths, and a job site left cleaner than we found it.</p></div></div>
-      </div>
+    <div class="stat-teaser-row" data-reveal>
+      <div class="stat-teaser"><div class="n" style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:40px;line-height:1;color:var(--blue);">24/7</div><div class="l" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;">Emergency Response</div></div>
+      <div class="stat-teaser"><div class="n" style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:40px;line-height:1;color:var(--blue);">$0</div><div class="l" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;">Trip Charge For Estimates</div></div>
+      <div class="stat-teaser"><div class="n" style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:40px;line-height:1;color:var(--blue);">100%</div><div class="l" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;">Licensed Idaho Contractor</div></div>
+    </div>
+    <div class="svc-view-all" data-reveal>
+      <a class="btn btn-ghost" href="plumbing-why-us.html">See Why Homeowners Choose Us &rarr;</a>
     </div>
   </div>
 </section>
@@ -390,17 +393,15 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       <p class="eyebrow" data-reveal>Coverage</p>
       <h2 data-reveal>Serving Homeowners Across North Idaho.</h2>
     </div>
-    <div class="coverage-wrap">
-    <table class="coverage-table" data-reveal>
-      <thead><tr><th>City</th><th>Typical Response</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Coeur d&rsquo;Alene</td><td class="resp">Same Day</td><td>Home base &mdash; fastest response times</td></tr>
-        <tr><td>Post Falls</td><td class="resp">Same Day</td><td>Full residential coverage</td></tr>
-        <tr><td>Hayden</td><td class="resp">Same / Next Day</td><td>Repair &amp; install</td></tr>
-        <tr><td>Rathdrum</td><td class="resp">Next Day</td><td>Full-service coverage</td></tr>
-        <tr><td>Spokane, WA</td><td class="resp">By Appointment</td><td>Greater metro area</td></tr>
-      </tbody>
-    </table>
+    <div class="chip-cloud" data-reveal style="display:flex;flex-wrap:wrap;gap:10px;">
+      <span class="contact-badge">Coeur d&rsquo;Alene, ID</span>
+      <span class="contact-badge">Post Falls, ID</span>
+      <span class="contact-badge">Hayden, ID</span>
+      <span class="contact-badge">Rathdrum, ID</span>
+      <span class="contact-badge">Spokane, WA</span>
+    </div>
+    <div class="svc-view-all" data-reveal>
+      <a class="btn btn-ghost" href="plumbing-coverage.html">See Full Coverage &amp; Response Times &rarr;</a>
     </div>
   </div>
 </section>
@@ -422,8 +423,9 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
         <div class="of">Sample rating format</div>
       </div>
     </div>
-    <div class="dots"><span class="active"></span><span></span><span></span></div>
-    <p class="gallery-note">Sample review format for portfolio purposes &mdash; illustrates how a real Google review feed would display on the live site.</p>
+    <div class="svc-view-all" data-reveal>
+      <a class="btn btn-ghost" href="plumbing-reviews.html">Read More Reviews &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -439,29 +441,24 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
         <div class="faq-a"><p>Yes &mdash; most calls booked before noon are handled same day. Burst pipes, no hot water, and active leaks jump the line and get a same-day dispatch regardless of when you call.</p></div>
       </div>
       <div class="faq-item" data-reveal>
-        <button class="faq-q">What areas does Ridgeline Plumbing Co. serve?<span class="plus">+</span></button>
-        <div class="faq-a"><p>We serve homeowners in Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, and the surrounding North Idaho and Spokane, WA area.</p></div>
-      </div>
-      <div class="faq-item" data-reveal>
         <button class="faq-q">Do you charge a trip fee to come look at the problem?<span class="plus">+</span></button>
         <div class="faq-a"><p>No. Estimates are free, and we give you a flat, upfront price before any work starts &mdash; no surprise charges on the invoice.</p></div>
       </div>
-      <div class="faq-item" data-reveal>
-        <button class="faq-q">Is someone available for plumbing emergencies after hours?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Yes &mdash; call our main line any time for a burst pipe, sewer backup, or no-hot-water emergency and you&rsquo;ll reach a real person, not a call center.</p></div>
-      </div>
+    </div>
+    <div class="svc-view-all" data-reveal>
+      <a class="btn btn-ghost" href="plumbing-faq.html">See All FAQs &rarr;</a>
     </div>
   </div>
 </section>
 
-<section class="cta-band" id="contact">
+<section class="cta-band">
   <div class="wrap">
     <p class="eyebrow" style="justify-content:center;" data-reveal>Get It Fixed</p>
     <h2 data-reveal>Something Leaking, Clogged, Or Cold?</h2>
     <p>Tell us what&rsquo;s going on and we&rsquo;ll get back to you fast with a straight answer and a fair price.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call or Text</a>
-      <a class="btn btn-ghost" href="mailto:hello@ridgelineplumbingco.com">Email Us</a>
+      <a class="btn btn-ghost" href="plumbing-contact.html">Contact Us</a>
     </div>
   </div>
 </section>
@@ -474,21 +471,21 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       <p>Residential plumbing repair and installation for homeowners across North Idaho and the greater Spokane area.</p>
     </div>
     <div class="foot-col">
-      <span class="foot-head">Services</span>
+      <span class="foot-head"><a href="plumbing-services.html">Services</a></span>
       <a href="plumbing-services.html#drain-cleaning">Drain Cleaning</a>
       <a href="plumbing-services.html#water-heater">Water Heater Repair</a>
       <a href="plumbing-services.html#leak-detection">Leak Detection</a>
       <a href="plumbing-services.html#emergency">Emergency Plumbing</a>
     </div>
     <div class="foot-col">
-      <span class="foot-head">Coverage</span>
+      <span class="foot-head"><a href="plumbing-coverage.html">Coverage</a></span>
       <span class="foot-plain">Coeur d&rsquo;Alene, ID</span>
       <span class="foot-plain">Post Falls, ID</span>
       <span class="foot-plain">Hayden &amp; Rathdrum, ID</span>
       <span class="foot-plain">Spokane, WA</span>
     </div>
     <div class="foot-col">
-      <span class="foot-head">Contact</span>
+      <span class="foot-head"><a href="plumbing-contact.html">Contact</a></span>
       <a href="tel:12085550142">208.555.0142</a>
       <a href="mailto:hello@ridgelineplumbingco.com">hello@ridgelineplumbingco.com</a>
       <span class="foot-plain">Mon&ndash;Fri 7am&ndash;6pm &middot; 24/7 Emergency</span>
