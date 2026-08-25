@@ -16,7 +16,7 @@ html,body{margin:0;padding:0;}
 body{
   background:var(--bg); color:var(--ink);
   font-family:'Barlow',ui-sans-serif,system-ui,sans-serif;
-  font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  font-size:16px; line-height:1.6; text-rendering:optimizeLegibility;
 }
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
 img,svg{max-width:100%;display:block;}
@@ -31,7 +31,8 @@ h1,h2{font-family:'Anton',ui-sans-serif,sans-serif;font-weight:400;text-transfor
 header.site{position:sticky;top:0;z-index:50;background:rgba(10,10,9,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
 .header-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:0 0 auto;}
-.brand img{height:44px;width:auto;}
+.brand img{height:60px;width:auto;}
+@media (max-width:840px){.brand img{height:48px;}}
 nav.main{display:flex;align-items:center;gap:30px;}
 nav.main a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);}
 nav.main a:hover{color:var(--ink);}
@@ -130,15 +131,37 @@ nav.main a:hover{color:var(--ink);}
 .section-head p{color:var(--ink-soft);font-size:16px;margin:0;}
 
 /* SERVICES CAROUSEL */
-.svc-scroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 -24px;padding-left:24px;padding-right:24px;}
+.svc-carousel{position:relative;margin-top:8px;}
+.svc-scroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:10px;}
 .svc-scroll::-webkit-scrollbar{height:6px;}
 .svc-scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:3px;}
-.svc-card{scroll-snap-align:start;flex:0 0 300px;background:var(--bg-2);border:1px solid var(--line);border-radius:2px;position:relative;overflow:hidden;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;}
+.svc-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);background:rgba(10,10,9,0.85);color:var(--ink);font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s ease, background .2s ease;}
+.svc-arrow:hover{border-color:var(--ink);background:var(--bg-2);}
+.svc-arrow-prev{left:-18px;}
+.svc-arrow-next{right:-18px;}
+@media (max-width:900px){.svc-arrow{display:none;}}
+.svc-card{scroll-snap-align:start;flex:0 0 300px;background:var(--bg-2);border:1px solid var(--line);border-radius:2px;position:relative;overflow:hidden;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;cursor:pointer;transition:border-color .2s ease;}
+.svc-card:hover, .svc-card:focus-visible{border-color:var(--ink-soft);}
 .svc-card::before{content:"";position:absolute;inset:0;opacity:0.5;color:var(--line-strong);}
 .svc-card .n{position:relative;font-family:'Anton',sans-serif;font-size:13px;letter-spacing:0.06em;color:var(--accent);margin-bottom:auto;}
 .svc-card h3{position:relative;font-family:'Barlow',sans-serif;font-weight:600;text-transform:none;font-size:19px;margin:0 0 8px;}
 .svc-card p{position:relative;font-size:13.5px;color:var(--ink-soft);margin:0;}
 .svc-card svg{position:absolute;inset:0;width:100%;height:100%;color:var(--line-strong);opacity:0.7;}
+.svc-view{position:relative;display:inline-flex;align-items:center;gap:4px;margin-top:14px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:0.05em;text-transform:uppercase;color:var(--accent);}
+
+.svc-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;visibility:hidden;opacity:0;transition:opacity .2s ease, visibility 0s linear .2s;}
+.svc-modal.is-open{visibility:visible;opacity:1;transition:opacity .2s ease;}
+.svc-modal-backdrop{position:absolute;inset:0;background:rgba(6,6,5,0.86);}
+.svc-modal-inner{position:relative;z-index:1;background:var(--bg-2);border:1px solid var(--line-strong);border-radius:2px;max-width:920px;width:100%;max-height:85vh;overflow-y:auto;padding:28px;}
+.svc-modal-inner h3{font-family:'Anton',sans-serif;font-size:22px;letter-spacing:0.02em;text-transform:uppercase;margin:0 0 18px;}
+.svc-modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line-strong);background:transparent;color:var(--ink);font-size:20px;line-height:1;cursor:pointer;}
+.svc-modal-close:hover{border-color:var(--ink);}
+.svc-modal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+.svc-modal-grid figure{margin:0;background:var(--bg-3);border:1px solid var(--line);border-radius:2px;overflow:hidden;}
+.svc-modal-grid img{display:block;width:100%;height:auto;}
+.svc-modal-grid img.is-capped{width:auto;max-width:100%;margin:0 auto;}
+.svc-modal-grid figcaption{padding:10px 12px;font-size:12.5px;color:var(--ink-soft);}
+@media (max-width:640px){.svc-modal{padding:12px;}.svc-modal-inner{padding:20px;max-height:90vh;}}
 
 /* WORK GRID (overlay cards) */
 .gallery-note{max-width:680px;margin:0 0 32px;font-size:13.5px;color:var(--ink-faint);border:1px dashed var(--line-strong);padding:10px 16px;border-radius:2px;}
