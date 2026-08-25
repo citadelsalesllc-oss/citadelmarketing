@@ -146,16 +146,20 @@ nav.main a:hover{color:var(--blue);}
 .section-head p{color:var(--ink-soft);font-size:16px;margin:0;}
 
 .svc-list{border-top:1px solid var(--line);}
-.svc-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);}
+.svc-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:background .15s ease;}
 .svc-row:nth-child(even){background:var(--panel);margin:0 -24px;padding:22px 24px;}
+.svc-row:hover{background:var(--blue-soft);}
+.svc-row:hover .svc-body h3{color:var(--blue);}
+.svc-row:hover .svc-arrow{color:var(--blue);transform:translateX(3px);}
 .svc-num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--copper);}
 .svc-icon{width:44px;height:44px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;}
 .svc-icon svg{width:21px;height:21px;}
-.svc-body h3{font-family:'Public Sans',sans-serif;font-weight:700;text-transform:none;font-size:18px;color:var(--navy);margin:0 0 4px;}
+.svc-body h3{font-family:'Public Sans',sans-serif;font-weight:700;text-transform:none;font-size:18px;color:var(--navy);margin:0 0 4px;transition:color .15s ease;}
 .svc-body p{font-size:14px;color:var(--ink-soft);margin:0;max-width:520px;}
 .svc-row-grid{display:flex;align-items:center;gap:18px;}
-.svc-arrow{color:var(--line-strong);font-size:20px;}
+.svc-arrow{color:var(--line-strong);font-size:20px;transition:color .15s ease, transform .15s ease;}
 @media (max-width:700px){.svc-row{grid-template-columns:48px 1fr;}.svc-arrow{display:none;}}
+.svc-view-all{margin-top:28px;text-align:center;}
 
 .why-split{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
 @media (max-width:860px){.why-split{grid-template-columns:1fr;gap:32px;}}
@@ -254,7 +258,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       </span>
     </a>
     <nav class="main">
-      <a href="#services">Services</a>
+      <a href="plumbing-services.html">Services</a>
       <a href="#why-us">Why Us</a>
       <a href="#areas">Coverage</a>
       <a href="#reviews">Reviews</a>
@@ -271,7 +275,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
   </div>
   <div class="mobile-nav" id="mobileNav">
     <div class="wrap">
-      <a href="#services">Services</a>
+      <a href="plumbing-services.html">Services</a>
       <a href="#why-us">Why Us</a>
       <a href="#areas">Coverage</a>
       <a href="#reviews">Reviews</a>
@@ -337,36 +341,24 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       <p>No upselling, no jargon &mdash; just the fix, explained plainly, priced upfront.</p>
     </div>
     <div class="svc-list">
-      <div class="svc-row" data-reveal>
+      <a class="svc-row" href="plumbing-services.html#drain-cleaning" data-reveal>
         <div class="svc-row-grid"><span class="svc-num">01</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3 4-6 8-6 11.5A6 6 0 0 0 12 21a6 6 0 0 0 6-6.5C18 11 15 7 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div></div>
         <div class="svc-body"><h3>Drain Cleaning</h3><p>Slow or blocked drains cleared fast &mdash; kitchen, bath, and main line, with a camera inspection when needed.</p></div>
         <span class="svc-arrow">&rarr;</span>
-      </div>
-      <div class="svc-row" data-reveal>
+      </a>
+      <a class="svc-row" href="plumbing-services.html#water-heater" data-reveal>
         <div class="svc-row-grid"><span class="svc-num">02</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="9" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.6"/></svg></div></div>
         <div class="svc-body"><h3>Water Heater Repair &amp; Install</h3><p>Tank and tankless service &mdash; no hot water, leaks, or a straightforward replacement quote.</p></div>
         <span class="svc-arrow">&rarr;</span>
-      </div>
-      <div class="svc-row" data-reveal>
+      </a>
+      <a class="svc-row" href="plumbing-services.html#leak-detection" data-reveal>
         <div class="svc-row-grid"><span class="svc-num">03</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M14.5 14.5L20 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
         <div class="svc-body"><h3>Leak Detection &amp; Repair</h3><p>Hidden slab and wall leaks found without tearing your house apart, then repaired right.</p></div>
         <span class="svc-arrow">&rarr;</span>
-      </div>
-      <div class="svc-row" data-reveal>
-        <div class="svc-row-grid"><span class="svc-num">04</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 9h9a4 4 0 0 1 4 4v0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="19" cy="9" r="2" stroke="currentColor" stroke-width="1.6"/></svg></div></div>
-        <div class="svc-body"><h3>Fixture &amp; Faucet Installation</h3><p>Faucets, sinks, toilets, and garbage disposals installed clean &mdash; your fixtures or ours.</p></div>
-        <span class="svc-arrow">&rarr;</span>
-      </div>
-      <div class="svc-row" data-reveal>
-        <div class="svc-row-grid"><span class="svc-num">05</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h16M4 19h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
-        <div class="svc-body"><h3>Sewer &amp; Water Line Repair</h3><p>Trenchless repair options where possible, so your yard doesn&rsquo;t end up looking like a job site.</p></div>
-        <span class="svc-arrow">&rarr;</span>
-      </div>
-      <div class="svc-row" data-reveal>
-        <div class="svc-row-grid"><span class="svc-num">06</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
-        <div class="svc-body"><h3>Emergency Plumbing (24/7)</h3><p>Burst pipe or sewer backup at 2am? Call the same number &mdash; someone picks up.</p></div>
-        <span class="svc-arrow">&rarr;</span>
-      </div>
+      </a>
+    </div>
+    <div class="svc-view-all" data-reveal>
+      <a class="btn btn-ghost" href="plumbing-services.html">View All 6 Services &amp; Job Photos &rarr;</a>
     </div>
   </div>
 </section>
@@ -483,10 +475,10 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
     </div>
     <div class="foot-col">
       <span class="foot-head">Services</span>
-      <a href="#services">Drain Cleaning</a>
-      <a href="#services">Water Heater Repair</a>
-      <a href="#services">Leak Detection</a>
-      <a href="#services">Emergency Plumbing</a>
+      <a href="plumbing-services.html#drain-cleaning">Drain Cleaning</a>
+      <a href="plumbing-services.html#water-heater">Water Heater Repair</a>
+      <a href="plumbing-services.html#leak-detection">Leak Detection</a>
+      <a href="plumbing-services.html#emergency">Emergency Plumbing</a>
     </div>
     <div class="foot-col">
       <span class="foot-head">Coverage</span>
