@@ -1,0 +1,11 @@
+{
+  "client_name": "Acme Dental",
+  "ga4_property_id": "123456789",
+  "meta_ad_account_id": "act_1234567890",
+  "meta_result_action_type": "lead",
+  "brand": {
+    "primary_color": "#0B5FFF",
+    "secondary_color": "#1A1A2E",
+    "logo_path": "assets/logos/acme_dental.png"
+  }
+}
