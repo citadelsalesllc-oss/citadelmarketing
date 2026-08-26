@@ -69,10 +69,11 @@ nav.main a.is-current{color:var(--blue);}
 .mobile-nav .wrap{display:flex;flex-direction:column;padding:4px 24px 20px;gap:0;}
 .mobile-nav a{font-family:'Public Sans',sans-serif;font-weight:600;font-size:16px;text-decoration:none;color:var(--ink-soft);padding:14px 0;border-top:1px solid var(--line);}
 .mobile-nav .btn{margin-top:14px;width:100%;}
-.mobile-nav-social{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
-.mobile-nav-social a{border:none;padding:0;display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--panel);color:var(--ink-soft);flex:0 0 auto;transition:background .15s ease, color .15s ease;}
-.mobile-nav-social a:hover{background:var(--amber);color:#fff;}
-.mobile-nav-social svg{width:17px;height:17px;}
+.header-social{display:none;align-items:center;gap:6px;margin-right:4px;}
+.header-social a{width:30px;height:30px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);flex:0 0 auto;transition:background .15s ease, color .15s ease;}
+.header-social a:hover{background:#c1832f;color:#fff;}
+.header-social svg{width:14px;height:14px;}
+@media (max-width:900px){.header-social{display:flex;}}
 @media (min-width:901px){.mobile-nav{display:none !important;}}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Public Sans',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:0.03em;text-transform:uppercase;padding:15px 26px;border-radius:var(--radius);text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;max-width:100%;transition:background .15s ease,border-color .15s ease,transform .15s ease;}
@@ -188,6 +189,11 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
     </nav>
     <div class="header-actions">
       <a class="btn btn-primary" href="tel:12085550142">Call Now</a>
+      <div class="header-social">
+        <a href="#" aria-label="Instagram (sample)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.1" cy="6.9" r="1.1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Facebook (sample)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 21.8v-8h2.68l.4-3.12H14V8.62c0-.9.25-1.52 1.54-1.52H17.2V4.3c-.3-.04-1.31-.13-2.5-.13-2.47 0-4.16 1.51-4.16 4.28v2.23H7.86v3.12H10.5v8h3.5z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="YouTube (sample)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.3" y="6" width="19.4" height="12" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M10.3 9.6l4.8 2.4-4.8 2.4z" fill="currentColor"/></svg></a>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -202,13 +208,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       <a href="plumbing-reviews.html">Reviews</a>
       <a href="plumbing-faq.html">FAQ</a>
       <a href="plumbing-contact.html">Contact</a>
-      <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call Now</a>
-      <div class="mobile-nav-social">
-        <a href="#" aria-label="Instagram (sample)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.1" cy="6.9" r="1.1" fill="currentColor"/></svg></a>
-        <a href="#" aria-label="Facebook (sample)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 21.8v-8h2.68l.4-3.12H14V8.62c0-.9.25-1.52 1.54-1.52H17.2V4.3c-.3-.04-1.31-.13-2.5-.13-2.47 0-4.16 1.51-4.16 4.28v2.23H7.86v3.12H10.5v8h3.5z" fill="currentColor"/></svg></a>
-        <a href="#" aria-label="YouTube (sample)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.3" y="6" width="19.4" height="12" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M10.3 9.6l4.8 2.4-4.8 2.4z" fill="currentColor"/></svg></a>
-      </div>
-    </div>
+      <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call Now</a>    </div>
   </div>
 </header>
 
