@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&amp;family=Public+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,214 +46,204 @@
 </script>
 <style>
 :root{
-  --paper:#ffffff; --panel:#eef3f8; --panel-2:#e2ecf3;
-  --ink:#0f2436; --ink-soft:#45596b; --ink-faint:#7f8fa0;
-  --line:#d9e2ea; --line-strong:#b9c8d4;
-  --blue:#0f5aa8; --blue-hover:#0c4784; --blue-soft:#e4eef8; --blue-text:#0f5aa8;
-  --copper:#b56a34; --copper-soft:#f5e9dd;
-  --navy:#0f2436; --navy-2:#16324a;
-  --focus:#0f5aa8;
-  --radius:3px;
+  --ink:#0a1420; --ink-2:#122132; --ink-3:#1a3049;
+  --paper:#f7f4ee; --panel:#efe9dc;
+  --ink-text:#101d2b; --ink-soft:#57697b; --ink-faint:#8492a0;
+  --on-dark:#eef2f5; --on-dark-soft:#9fb0c1; --on-dark-faint:#5c7086;
+  --line:#e3ddcd; --line-strong:#cfc6ae; --line-dark:#28394c;
+  --amber:#c1832f; --amber-bright:#e0a24d; --amber-soft:#f3e2c4;
+  --steel:#3d75a3;
+  --focus:#e0a24d;
+  --radius:2px;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
-body{background:var(--paper);color:var(--ink);font-family:'Public Sans',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.6;text-rendering:optimizeLegibility;}
+body{background:var(--paper);color:var(--ink-text);font-family:'Public Sans',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.65;text-rendering:optimizeLegibility;}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
 img,svg{max-width:100%;display:block;}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px;}
 a{color:inherit;}
-h1,h2,h3{font-family:'Big Shoulders Display',ui-sans-serif,sans-serif;font-weight:700;text-transform:uppercase;text-wrap:balance;margin:0;letter-spacing:0.005em;color:var(--navy);}
+h1,h2,h3{font-family:'Big Shoulders Display',ui-sans-serif,sans-serif;font-weight:800;text-transform:uppercase;text-wrap:balance;margin:0;letter-spacing:0.005em;color:var(--ink);}
 .mono{font-family:'IBM Plex Mono',ui-monospace,monospace;}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue-text);}
-.eyebrow::before{content:"//";color:var(--copper);}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--amber);flex:0 0 auto;}
+.eyebrow.on-dark{color:var(--amber-bright);}
 
-.sample-bar{background:var(--navy);color:#fff;text-align:center;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11.5px;letter-spacing:0.05em;text-transform:uppercase;padding:7px 16px;}
+.sample-bar{background:var(--ink);color:#fff;text-align:center;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11.5px;letter-spacing:0.05em;text-transform:uppercase;padding:7px 16px;}
 
-.utility-bar{background:var(--navy-2);color:#cfe0ee;}
+.utility-bar{background:var(--ink-2);color:var(--on-dark-soft);}
 .utility-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.02em;}
 .utility-row a{text-decoration:none;color:#fff;}
-.utility-row a:hover{color:var(--copper);}
+.utility-row a:hover{color:var(--amber-bright);}
 @media (max-width:700px){.utility-row .u-hide{display:none;}}
 
-header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
-.header-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 0;}
+header.site{position:sticky;top:0;z-index:50;background:rgba(247,244,238,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto;}
-.brand-mark{width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 40px;}
-.brand-mark svg{width:22px;height:22px;}
-.brand-text{display:flex;flex-direction:column;line-height:1;}
-.brand-text .b1{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;letter-spacing:0.01em;text-transform:uppercase;color:var(--navy);}
-.brand-text .b2{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue-text);margin-top:2px;}
-nav.main{display:flex;align-items:center;gap:26px;}
-nav.main a{font-family:'Public Sans',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:0.01em;text-decoration:none;color:var(--ink-soft);}
-nav.main a:hover{color:var(--blue);}
+.brand-logo{height:50px;width:auto;display:block;}
+@media (max-width:900px){.brand-logo{height:40px;}}
+nav.main{display:flex;align-items:center;gap:30px;}
+nav.main a{position:relative;font-family:'Public Sans',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.02em;text-decoration:none;color:var(--ink-soft);padding:6px 0;}
+nav.main a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--amber);transition:right .18s ease;}
+nav.main a:hover{color:var(--ink);}
+nav.main a:hover::after,
+nav.main a.is-current::after{right:0;}
+nav.main a.is-current{color:var(--ink);}
 @media (max-width:900px){nav.main{display:none;}}
 .header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
-.nav-toggle{display:none;background:none;border:1.5px solid var(--line-strong);border-radius:var(--radius);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--navy);flex:0 0 auto;}
+.nav-toggle{display:none;background:none;border:1.5px solid var(--line-strong);border-radius:var(--radius);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);flex:0 0 auto;}
 .nav-toggle svg{width:20px;height:20px;}
 .nav-toggle .icon-close{display:none;}
 .nav-toggle[aria-expanded="true"] .icon-open{display:none;}
 .nav-toggle[aria-expanded="true"] .icon-close{display:block;}
 @media (max-width:900px){.nav-toggle{display:flex;} .header-row .btn-primary{display:none;}}
-.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(15,36,54,0.12);}
+.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 16px 32px rgba(10,20,32,0.16);}
 .mobile-nav.open{display:block;}
 .mobile-nav .wrap{display:flex;flex-direction:column;padding:4px 24px 20px;gap:0;}
 .mobile-nav a{font-family:'Public Sans',sans-serif;font-weight:600;font-size:16px;text-decoration:none;color:var(--ink-soft);padding:14px 0;border-top:1px solid var(--line);}
 .mobile-nav .btn{margin-top:14px;width:100%;}
 @media (min-width:901px){.mobile-nav{display:none !important;}}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Public Sans',sans-serif;font-weight:700;font-size:15px;letter-spacing:0.01em;padding:13px 24px;border-radius:var(--radius);text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;max-width:100%;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Public Sans',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:0.03em;text-transform:uppercase;padding:15px 26px;border-radius:var(--radius);text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;max-width:100%;transition:background .15s ease,border-color .15s ease,transform .15s ease;}
 @media (max-width:480px){.btn{white-space:normal;text-align:center;line-height:1.3;}}
-.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue);}
-.btn-primary:hover{background:var(--blue-hover);border-color:var(--blue-hover);}
-.btn-ghost{background:transparent;color:var(--navy);border-color:var(--line-strong);}
-.btn-ghost:hover{border-color:var(--navy);}
+.btn-primary{background:var(--amber);color:#191008;border-color:var(--amber);}
+.btn-primary:hover{background:var(--amber-bright);border-color:var(--amber-bright);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong);}
+.btn-ghost:hover{border-color:var(--ink);}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,0.32);}
+.btn-ghost.on-dark:hover{border-color:#fff;}
 .btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
 
-.hero{position:relative;overflow:hidden;background:var(--panel);border-bottom:1px solid var(--line);padding:64px 0 0;}
-.hero-photo{position:relative;background:var(--navy);}
-.hero-photo::before{content:"";position:absolute;top:0;left:0;width:100%;aspect-ratio:1536/714;max-height:600px;z-index:0;background-image:linear-gradient(180deg, rgba(10,20,30,0.32) 0%, rgba(10,20,30,0.1) 40%, rgba(10,20,30,0.88) 100%), url('assets/img/plumbing/hero-truck.png');background-size:cover;background-position:center top;}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.9fr;gap:44px;align-items:start;padding-bottom:0;min-height:440px;}
-.hero-grid > *{min-width:0;}
-@media (max-width:960px){.hero-grid{grid-template-columns:1fr;min-height:320px;}}
-.hero-head{display:flex;flex-direction:column;gap:18px;padding:26px 0 56px;justify-content:flex-end;min-height:clamp(150px, 46.5vw, 560px);}
-@media (max-width:960px){.hero-head{padding:0;}}
-.hero-head h1{font-size:clamp(36px,5.6vw,60px);line-height:0.98;}
-.hero-lede{font-size:17px;color:var(--ink-soft);max-width:480px;}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px;}
-.hero-stars{display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink-soft);}
-.hero-stars .stars{color:var(--copper);letter-spacing:1px;}
-.hero-photo .hero-stars{color:#e7edf3;}
-.hero-call-btn{margin-bottom:12px;}
-.hero-stars-card{margin-bottom:10px;}
+.ridge{display:block;width:100%;height:44px;}
+@media (max-width:700px){.ridge{height:26px;}}
+
+.hero{position:relative;background:var(--ink);}
+.hero-photo{position:relative;width:100%;aspect-ratio:1536/714;max-height:680px;overflow:hidden;}
+.hero-photo::before{content:"";position:absolute;inset:0;background-image:linear-gradient(180deg, rgba(10,20,32,0.05) 0%, rgba(10,20,32,0.05) 60%, rgba(10,20,32,0.92) 100%), url('assets/img/plumbing/hero-truck.png');background-size:cover;background-position:center top;}
+.hero-tag{position:absolute;right:24px;bottom:20px;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.75);}
+@media (max-width:700px){.hero-tag{display:none;}}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
-.quote-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 18px 44px rgba(15,36,54,0.12);padding:26px 26px 24px;margin:26px 0 40px;}
-.quote-card .qc-head{font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;}
-.quote-card .qc-sub{font-size:13px;color:var(--ink-soft);margin-bottom:18px;}
-.qc-field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;min-width:0;}
-.qc-field label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);}
-.qc-field input, .qc-field select{width:100%;min-width:0;font-family:'Public Sans',sans-serif;font-size:14.5px;padding:11px 12px;border:1.5px solid var(--line-strong);border-radius:var(--radius);background:#fbfcfd;color:var(--ink);}
-.qc-field input:focus, .qc-field select:focus{outline:2px solid var(--focus);outline-offset:1px;}
-.qc-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0;}
-.qc-row2 > *{min-width:0;}
-.quote-card .btn{width:100%;margin-top:4px;}
-.qc-note{font-size:11.5px;color:var(--ink-faint);margin-top:10px;text-align:center;}
-@media (max-width:960px){.quote-card{max-width:420px;}}
+.manifesto{background:var(--ink);color:var(--on-dark);padding:8px 0 76px;}
+.manifesto-grid{display:grid;grid-template-columns:1.2fr 0.9fr;gap:56px;align-items:start;}
+.manifesto-grid > *{min-width:0;}
+@media (max-width:960px){.manifesto-grid{grid-template-columns:1fr;gap:40px;}}
+.manifesto-head h1{color:#fff;font-size:clamp(27px,6.2vw,84px);line-height:1.05;margin:14px 0 22px;letter-spacing:-0.01em;overflow-wrap:break-word;word-break:break-word;}
+.manifesto-lede{font-size:18px;line-height:1.7;color:var(--on-dark-soft);max-width:520px;margin:0 0 30px;}
+.manifesto-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px;}
+.spec-plate{border-top:1px solid var(--line-dark);padding-top:18px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;color:var(--on-dark-soft);display:flex;flex-wrap:wrap;gap:10px 18px;text-transform:uppercase;}
+.spec-plate span{white-space:nowrap;}
+.spec-plate span::before{content:"—";margin-right:10px;color:var(--amber);}
+.spec-plate span:first-child::before{content:none;margin-right:0;}
 
-.badge-strip{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);}
-.badge-row{display:flex;flex-wrap:wrap;gap:0;justify-content:space-between;}
-.badge{flex:1 1 0;display:flex;align-items:center;justify-content:center;gap:9px;padding:18px 14px;border-left:1px solid rgba(255,255,255,0.1);font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.03em;text-transform:uppercase;color:#dce6ef;text-align:center;}
-.badge:first-child{border-left:none;}
-.badge svg{width:17px;height:17px;color:var(--copper);flex:0 0 auto;}
-@media (max-width:860px){.badge{flex:1 1 50%;border-left:none;border-top:1px solid rgba(255,255,255,0.1);}}
+.call-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:var(--radius);padding:30px 28px 26px;box-shadow:0 30px 60px rgba(0,0,0,0.35);}
+.call-card .cc-head{font-size:20px;color:#fff;margin-bottom:4px;}
+.call-card .cc-sub{font-size:13px;color:var(--on-dark-soft);margin-bottom:20px;}
+.cc-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;min-width:0;}
+.cc-field label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--on-dark-soft);}
+.cc-field input, .cc-field select, .cc-field textarea{width:100%;min-width:0;font-family:'Public Sans',sans-serif;font-size:14.5px;padding:11px 12px;border:1.5px solid var(--line-dark);border-radius:var(--radius);background:var(--ink);color:#fff;}
+.cc-field input::placeholder, .cc-field textarea::placeholder{color:#5c7086;}
+.cc-field input:focus, .cc-field select:focus, .cc-field textarea:focus{outline:2px solid var(--focus);outline-offset:1px;}
+.cc-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0;}
+.cc-row2 > *{min-width:0;}
+.call-card .btn{width:100%;margin-top:6px;}
+.cc-note{font-size:11px;color:#5c7086;margin-top:12px;text-align:center;}
 
-.section{padding:80px 0;}
-.section-head{max-width:640px;margin-bottom:40px;}
-.section-head h2{font-size:clamp(28px,3.6vw,40px);margin:10px 0 12px;}
-.section-head p{color:var(--ink-soft);font-size:16px;margin:0;}
+.impact{background:var(--paper);padding:64px 0;}
+.impact-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.impact-row > *{min-width:0;}
+@media (max-width:760px){.impact-row{grid-template-columns:1fr 1fr;row-gap:32px;}}
+.impact-item{border-left:1px solid var(--line-strong);padding:4px 24px;}
+.impact-item:first-child{border-left:none;padding-left:0;}
+@media (max-width:760px){.impact-item{border-left:none;padding:0 16px;}.impact-item:nth-child(odd){padding-left:0;}}
+.impact-item .n{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:clamp(30px,4vw,44px);color:var(--ink);font-variant-numeric:tabular-nums;line-height:1;}
+.impact-item .l{font-family:'Public Sans',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;}
+
+.section{padding:96px 0;}
+.section-head{max-width:640px;margin-bottom:44px;}
+.section-head h2{font-size:clamp(30px,3.8vw,48px);margin:12px 0 14px;letter-spacing:-0.005em;}
+.section-head p{color:var(--ink-soft);font-size:16.5px;margin:0;}
 
 .svc-list{border-top:1px solid var(--line);}
-.svc-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:background .15s ease;}
-.svc-row:nth-child(even){background:var(--panel);margin:0 -24px;padding:22px 24px;}
-.svc-row:hover{background:var(--blue-soft);}
-.svc-row:hover .svc-body h3{color:var(--blue);}
-.svc-row:hover .svc-arrow{color:var(--blue);transform:translateX(3px);}
-.svc-num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--copper);}
-.svc-icon{width:44px;height:44px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;}
-.svc-icon svg{width:21px;height:21px;}
-.svc-body h3{font-family:'Public Sans',sans-serif;font-weight:700;text-transform:none;font-size:18px;color:var(--navy);margin:0 0 4px;transition:color .15s ease;}
-.svc-body p{font-size:14px;color:var(--ink-soft);margin:0;max-width:520px;}
-.svc-row-grid{display:flex;align-items:center;gap:18px;}
-.svc-arrow{color:var(--line-strong);font-size:20px;transition:color .15s ease, transform .15s ease;}
-@media (max-width:700px){.svc-row{grid-template-columns:48px 1fr;}.svc-arrow{display:none;}}
-.svc-view-all{margin-top:28px;text-align:center;}
+.svc-row{position:relative;display:grid;grid-template-columns:88px 1fr auto;align-items:center;gap:20px;padding:34px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;overflow:hidden;}
+.svc-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--amber);transform:scaleY(0);transform-origin:bottom;transition:transform .22s ease;}
+.svc-row:hover::before{transform:scaleY(1);}
+.svc-row:hover{background:var(--panel);margin:0 -24px;padding:34px 24px;}
+.svc-row:hover .svc-body h3{color:var(--amber);}
+.svc-row:hover .svc-arrow{color:var(--ink);transform:translateX(4px);}
+.svc-num{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:46px;color:var(--line-strong);line-height:1;}
+.svc-body h3{font-family:'Public Sans',sans-serif;font-weight:700;text-transform:none;font-size:19px;color:var(--ink);margin:0 0 5px;transition:color .15s ease;}
+.svc-body p{font-size:14.5px;color:var(--ink-soft);margin:0;max-width:520px;}
+.svc-arrow{color:var(--line-strong);font-size:22px;transition:color .15s ease, transform .15s ease;}
+@media (max-width:700px){.svc-row{grid-template-columns:52px 1fr;}.svc-num{font-size:30px;}.svc-arrow{display:none;}}
+.svc-view-all{margin-top:32px;}
 
-.stat-teaser-row{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);}
-.stat-teaser{flex:1 1 200px;padding:20px 0;border-left:1px solid var(--line-strong);padding-left:20px;}
-.stat-teaser:first-child{border-left:none;padding-left:0;}
-@media (max-width:600px){.stat-teaser-row{gap:20px;}.stat-teaser{border-left:none;padding-left:0;flex:1 1 45%;}}
+.why-panel{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+.why-grid > *{min-width:0;}
+@media (max-width:860px){.why-grid{grid-template-columns:1fr;gap:32px;}}
+.why-list{display:flex;flex-direction:column;gap:0;}
+.why-item{display:flex;gap:16px;padding:22px 0;border-top:1px solid var(--line-strong);}
+.why-item:last-child{border-bottom:1px solid var(--line-strong);}
+.why-item .wn{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;color:var(--amber);flex:0 0 auto;padding-top:2px;}
+.why-item h4{margin:0 0 4px;font-family:'Public Sans',sans-serif;font-weight:700;font-size:16.5px;color:var(--ink);text-transform:none;}
+.why-item p{margin:0;font-size:14.5px;color:var(--ink-soft);}
 
-.contact-badge{border:1px solid var(--line-strong);color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.04em;text-transform:uppercase;padding:6px 13px;border-radius:20px;background:#fff;}
+.coverage-section{background:var(--ink);color:var(--on-dark);}
+.chip-cloud{display:flex;flex-wrap:wrap;gap:10px;}
+.contact-badge{border:1px solid var(--line-dark);color:var(--on-dark-soft);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.05em;text-transform:uppercase;padding:8px 15px;border-radius:20px;background:var(--ink-2);}
 
-.why-split{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
-@media (max-width:860px){.why-split{grid-template-columns:1fr;gap:32px;}}
-.why-stats{display:flex;flex-direction:column;gap:0;}
-.why-stat{padding:18px 0;border-top:1px solid var(--line);}
-.why-stat:last-child{border-bottom:1px solid var(--line);}
-.why-stat .n{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:44px;line-height:1;color:var(--blue);}
-.why-stat .l{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;}
-.check-list{display:flex;flex-direction:column;gap:16px;}
-.check-item{display:flex;gap:14px;align-items:flex-start;}
-.check-item .ck{width:24px;height:24px;border-radius:50%;background:var(--copper-soft);color:var(--copper);display:flex;align-items:center;justify-content:center;flex:0 0 24px;margin-top:2px;}
-.check-item .ck svg{width:13px;height:13px;}
-.check-item h4{margin:0 0 3px;font-family:'Public Sans',sans-serif;font-weight:700;font-size:16px;color:var(--navy);text-transform:none;}
-.check-item p{margin:0;font-size:14px;color:var(--ink-soft);}
-
-.coverage-section{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-.coverage-table{width:100%;border-collapse:collapse;}
-.coverage-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);padding:0 0 12px;border-bottom:2px solid var(--navy);}
-.coverage-table td{padding:16px 0;border-bottom:1px solid var(--line-strong);font-size:15px;}
-.coverage-table td:first-child{font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;color:var(--navy);}
-.coverage-table .resp{font-family:'IBM Plex Mono',monospace;color:var(--blue-text);font-weight:600;}
-.coverage-wrap{overflow-x:auto;}
-
-.spotlight{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:6px;padding:40px;}
-@media (max-width:800px){.spotlight{grid-template-columns:1fr;text-align:center;}}
-.spotlight blockquote{margin:0;font-family:'Big Shoulders Display',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);text-transform:none;line-height:1.25;color:var(--navy);letter-spacing:0;}
-.spotlight cite{display:block;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:13px;color:var(--ink-soft);}
+.spotlight{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:48px 44px 40px;}
+.spotlight-mark{font-family:'Big Shoulders Display',sans-serif;font-size:88px;line-height:1;color:var(--amber-soft);position:absolute;top:8px;left:32px;user-select:none;}
+.spotlight-inner{position:relative;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+@media (max-width:800px){.spotlight-inner{grid-template-columns:1fr;text-align:center;}}
+.spotlight blockquote{margin:0;font-family:'Big Shoulders Display',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,29px);text-transform:none;line-height:1.28;color:var(--ink);letter-spacing:0;}
+.spotlight cite{display:block;margin-top:18px;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:12.5px;color:var(--ink-soft);letter-spacing:0.03em;}
 .spotlight-score{text-align:center;flex:0 0 auto;}
-.spotlight-score .num{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:56px;color:var(--copper);line-height:1;}
-.spotlight-score .stars{color:var(--copper);font-size:16px;margin-top:6px;}
-.spotlight-score .of{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-faint);margin-top:4px;}
-.dots{display:flex;gap:8px;justify-content:center;margin-top:28px;}
-.dots span{width:7px;height:7px;border-radius:50%;background:var(--line-strong);}
-.dots span.active{background:var(--blue);}
-.gallery-note{max-width:680px;margin:24px auto 0;font-size:13px;color:var(--ink-faint);text-align:center;}
+.spotlight-score .num{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:58px;color:var(--amber);line-height:1;}
+.spotlight-score .stars{color:var(--amber);font-size:16px;margin-top:8px;letter-spacing:2px;}
+.spotlight-score .of{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--ink-faint);margin-top:4px;text-transform:uppercase;letter-spacing:0.04em;}
 
+.faq-panel{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 .faq-list{max-width:760px;}
-.faq-item{border-top:1px solid var(--line);}
-.faq-item:last-child{border-bottom:1px solid var(--line);}
-.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:none;text-align:left;padding:20px 0;cursor:pointer;font-family:'Public Sans',sans-serif;font-weight:700;font-size:17px;color:var(--navy);}
-.faq-q .plus{font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--blue);flex:0 0 auto;transition:transform .2s ease;}
+.faq-item{border-top:1px solid var(--line-strong);}
+.faq-item:last-child{border-bottom:1px solid var(--line-strong);}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:none;text-align:left;padding:22px 0;cursor:pointer;font-family:'Public Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);}
+.faq-q .plus{font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--amber);flex:0 0 auto;transition:transform .2s ease;}
 .faq-item.open .faq-q .plus{transform:rotate(45deg);}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
 .faq-item.open .faq-a{max-height:200px;}
-.faq-a p{margin:0 0 20px;font-size:15px;color:var(--ink-soft);max-width:640px;}
+.faq-a p{margin:0 0 22px;font-size:15px;color:var(--ink-soft);max-width:640px;}
 
-.cta-band{background:var(--navy);color:#fff;text-align:center;padding:72px 0;}
-.cta-band .eyebrow{color:var(--copper);}
-.cta-band .eyebrow::before{color:#fff;}
-.cta-band h2{color:#fff;font-size:clamp(28px,4.6vw,46px);margin:10px 0 16px;}
-.cta-band p{color:#c3d3e0;font-size:16px;max-width:480px;margin:0 auto 30px;}
+.cta-band{position:relative;background:var(--ink);color:#fff;text-align:center;padding:0 0 88px;}
+.cta-band .eyebrow{justify-content:center;}
+.cta-band h2{color:#fff;font-size:clamp(30px,4.8vw,52px);margin:12px 0 18px;}
+.cta-band p{color:var(--on-dark-soft);font-size:16.5px;max-width:480px;margin:0 auto 32px;}
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.cta-band .btn-ghost{color:#fff;border-color:rgba(255,255,255,0.35);}
-.cta-band .btn-ghost:hover{border-color:#fff;}
 
-footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
-.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;padding:48px 0 28px;}
+footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;padding:56px 0 32px;}
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
 @media (max-width:480px){.foot-grid{grid-template-columns:1fr;}}
-.foot-col{display:flex;flex-direction:column;gap:9px;}
+.foot-col{display:flex;flex-direction:column;gap:10px;}
 .foot-col b{font-family:'Big Shoulders Display',sans-serif;font-size:19px;text-transform:uppercase;color:#fff;}
-.foot-brand p{color:#a9bfd1;font-size:13px;line-height:1.6;margin:6px 0 4px;max-width:300px;}
-.foot-head{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#7f96ab;margin-bottom:2px;}
-.foot-col a{color:#c3d3e0;font-size:13.5px;text-decoration:none;}
-.foot-col a:hover{color:var(--copper);}
-.foot-plain{color:#7f96ab;font-size:12.5px;}
-.foot-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:16px 0;font-size:12px;color:#7f96ab;}
+.foot-brand p{color:var(--on-dark-soft);font-size:13px;line-height:1.65;margin:6px 0 4px;max-width:300px;}
+.foot-head{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:2px;}
+.foot-col a{color:var(--on-dark-soft);font-size:13.5px;text-decoration:none;}
+.foot-col a:hover{color:var(--amber-bright);}
+.foot-plain{color:#5c7086;font-size:12.5px;}
+.foot-bottom{border-top:1px solid var(--line-dark);padding:18px 0;font-size:12px;color:#5c7086;}
 .foot-bottom .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 
-.floating-cta{position:fixed;right:20px;bottom:20px;z-index:500;display:inline-flex;align-items:center;gap:8px;background:var(--copper);color:#fff;font-family:'Public Sans',sans-serif;font-weight:700;font-size:14.5px;text-decoration:none;padding:14px 22px;border-radius:999px;box-shadow:0 10px 26px rgba(181,106,52,0.4);transition:background .2s ease, transform .2s ease;}
-.floating-cta:hover{transform:translateY(-2px);}
-.floating-cta .fc-dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.8s ease-in-out infinite;flex:0 0 7px;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.floating-cta{position:fixed;right:20px;bottom:20px;z-index:500;display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#191008;font-family:'Public Sans',sans-serif;font-weight:700;font-size:14px;letter-spacing:0.02em;text-decoration:none;padding:14px 22px;border-radius:999px;box-shadow:0 10px 26px rgba(193,131,47,0.45);transition:background .2s ease, transform .2s ease;}
+.floating-cta:hover{background:var(--amber-bright);transform:translateY(-2px);}
+.floating-cta .fc-dot{width:7px;height:7px;border-radius:50%;background:#191008;animation:pulse 1.8s ease-in-out infinite;flex:0 0 7px;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
 @media (max-width:900px){.floating-cta{right:14px;bottom:14px;padding:12px 18px;font-size:13px;}}
 
 [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
 [data-reveal].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}}
-.brand-logo{height:52px;width:auto;display:block;}
-@media (max-width:900px){.brand-logo{height:42px;}}
 </style>
 </head>
 <body>
@@ -299,22 +289,42 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
 </header>
 
 <main>
-<section class="hero hero-photo" id="top">
-  <h1 class="sr-only">Fast, Honest Plumbing. Done Right The First Time. &mdash; Ridgeline Plumbing Co., Coeur d&rsquo;Alene &amp; North Idaho</h1>
-  <div class="wrap hero-grid">
-    <div class="hero-head" aria-hidden="true"></div>
+<section class="hero" id="top">
+  <h1 class="sr-only">Unseen Work. Unquestionable Craft. &mdash; Ridgeline Plumbing Co., Coeur d&rsquo;Alene &amp; North Idaho</h1>
+  <div class="hero-photo" role="img" aria-label="Ridgeline Plumbing service truck parked at sunset above Lake Coeur d'Alene"></div>
+  <span class="hero-tag mono">COEUR D&rsquo;ALENE, ID &middot; EST.</span>
+</section>
+
+<svg class="ridge" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,40 L110,16 L240,44 L380,8 L520,36 L660,4 L810,32 L950,10 L1100,40 L1250,14 L1440,38 L1440,60 Z" fill="var(--ink)"/></svg>
+
+<section class="manifesto">
+  <div class="wrap manifesto-grid">
+    <div>
+      <div class="manifesto-head">
+        <p class="eyebrow on-dark" data-reveal>Residential Plumbing &mdash; North Idaho</p>
+        <h1 aria-hidden="true" data-reveal>Unseen work.<br>Unquestionable craft.</h1>
+      </div>
+      <p class="manifesto-lede" data-reveal>Ridgeline Plumbing Co. handles the pipework, pressure, and fixtures that keep a North Idaho home running &mdash; diagnosed straight, priced upfront, and signed off before we leave.</p>
+      <div class="manifesto-ctas" data-reveal>
+        <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call Now</a>
+        <a class="btn btn-ghost on-dark" href="plumbing-contact.html">Request an Estimate</a>
+      </div>
+      <div class="spec-plate" data-reveal>
+        <span>Lic. Idaho PLM&#8209;2291 (Sample)</span>
+        <span>Bonded &amp; Insured</span>
+        <span>24/7 Dispatch</span>
+      </div>
+    </div>
     <div data-reveal>
-      <a class="btn btn-primary hero-call-btn" href="tel:12085550142">208.555.0142 &mdash; Call Now</a>
-      <div class="hero-stars hero-stars-card" data-reveal><span class="stars">★★★★★</span> Sample rating format &mdash; 4.9 avg. from local reviews</div>
-      <form class="quote-card" onsubmit="return false" aria-label="Request a callback (sample form)">
-        <div class="qc-head">Request A Callback</div>
-        <div class="qc-sub">We&rsquo;ll call you back within the hour during business hours.</div>
-        <div class="qc-field"><label for="qc-name">Name</label><input id="qc-name" type="text" placeholder="Jane Homeowner"></div>
-        <div class="qc-row2">
-          <div class="qc-field"><label for="qc-phone">Phone</label><input id="qc-phone" type="tel" placeholder="(208) 555-0100"></div>
-          <div class="qc-field"><label for="qc-zip">ZIP</label><input id="qc-zip" type="text" placeholder="83814"></div>
+      <form class="call-card" onsubmit="return false" aria-label="Request a callback (sample form)">
+        <div class="cc-head">Request A Callback</div>
+        <div class="cc-sub">We&rsquo;ll call you back within the hour during business hours.</div>
+        <div class="cc-field"><label for="qc-name">Name</label><input id="qc-name" type="text" placeholder="Jane Homeowner"></div>
+        <div class="cc-row2">
+          <div class="cc-field"><label for="qc-phone">Phone</label><input id="qc-phone" type="tel" placeholder="(208) 555-0100"></div>
+          <div class="cc-field"><label for="qc-zip">ZIP</label><input id="qc-zip" type="text" placeholder="83814"></div>
         </div>
-        <div class="qc-field"><label for="qc-issue">What&rsquo;s Going On?</label>
+        <div class="cc-field"><label for="qc-issue">What&rsquo;s Going On?</label>
           <select id="qc-issue">
             <option>Drain / Clog</option>
             <option>Water Heater</option>
@@ -324,17 +334,18 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Request Callback</button>
-        <div class="qc-note">Sample form for demonstration &mdash; not connected to a live inbox.</div>
+        <div class="cc-note">Sample form for demonstration &mdash; not connected to a live inbox.</div>
       </form>
     </div>
   </div>
-  <div class="badge-strip">
-    <div class="wrap badge-row">
-      <div class="badge" data-reveal><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Licensed &amp; Insured</div>
-      <div class="badge" data-reveal><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>24/7 Emergency Line</div>
-      <div class="badge" data-reveal><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Upfront Flat-Rate Pricing</div>
-      <div class="badge" data-reveal><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-4-4-7-7.5-7-11.5A7 7 0 0 1 19 9.5C19 13.5 16 17 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Locally Owned</div>
-    </div>
+</section>
+
+<section class="impact">
+  <div class="wrap impact-row">
+    <div class="impact-item" data-reveal><div class="n">24/7</div><div class="l">Emergency Dispatch</div></div>
+    <div class="impact-item" data-reveal><div class="n">$0</div><div class="l">Trip Charge On Estimates</div></div>
+    <div class="impact-item" data-reveal><div class="n">100%</div><div class="l">Idaho Licensed &amp; Insured</div></div>
+    <div class="impact-item" data-reveal><div class="n">&lt;1HR</div><div class="l">Avg. Callback Window (Sample)</div></div>
   </div>
 </section>
 
@@ -347,17 +358,17 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
     </div>
     <div class="svc-list">
       <a class="svc-row" href="plumbing-services.html#drain-cleaning" data-reveal>
-        <div class="svc-row-grid"><span class="svc-num">01</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3 4-6 8-6 11.5A6 6 0 0 0 12 21a6 6 0 0 0 6-6.5C18 11 15 7 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div></div>
+        <span class="svc-num">01</span>
         <div class="svc-body"><h3>Drain Cleaning</h3><p>Slow or blocked drains cleared fast &mdash; kitchen, bath, and main line, with a camera inspection when needed.</p></div>
         <span class="svc-arrow">&rarr;</span>
       </a>
       <a class="svc-row" href="plumbing-services.html#water-heater" data-reveal>
-        <div class="svc-row-grid"><span class="svc-num">02</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="9" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.6"/></svg></div></div>
+        <span class="svc-num">02</span>
         <div class="svc-body"><h3>Water Heater Repair &amp; Install</h3><p>Tank and tankless service &mdash; no hot water, leaks, or a straightforward replacement quote.</p></div>
         <span class="svc-arrow">&rarr;</span>
       </a>
       <a class="svc-row" href="plumbing-services.html#leak-detection" data-reveal>
-        <div class="svc-row-grid"><span class="svc-num">03</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M14.5 14.5L20 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <span class="svc-num">03</span>
         <div class="svc-body"><h3>Leak Detection &amp; Repair</h3><p>Hidden slab and wall leaks found without tearing your house apart, then repaired right.</p></div>
         <span class="svc-arrow">&rarr;</span>
       </a>
@@ -368,30 +379,39 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
   </div>
 </section>
 
-<section class="section" id="why-us" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <div class="section-head">
+<section class="why-panel section" id="why-us">
+  <div class="wrap why-grid">
+    <div>
       <p class="eyebrow" data-reveal>Why Homeowners Call Us</p>
-      <h2 data-reveal>Straight Answers. Fair Prices.</h2>
+      <h2 data-reveal style="margin:12px 0 0;">Straight Answers. Fair Prices.</h2>
     </div>
-    <div class="stat-teaser-row" data-reveal>
-      <div class="stat-teaser"><div class="n" style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:40px;line-height:1;color:var(--blue);">24/7</div><div class="l" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;">Emergency Response</div></div>
-      <div class="stat-teaser"><div class="n" style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:40px;line-height:1;color:var(--blue);">$0</div><div class="l" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;">Trip Charge For Estimates</div></div>
-      <div class="stat-teaser"><div class="n" style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:40px;line-height:1;color:var(--blue);">100%</div><div class="l" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;">Licensed Idaho Contractor</div></div>
+    <div class="why-list" data-reveal>
+      <div class="why-item">
+        <span class="wn">01</span>
+        <div><h4>Priced before the wrench turns</h4><p>A flat number up front &mdash; no surprise line items on the invoice.</p></div>
+      </div>
+      <div class="why-item">
+        <span class="wn">02</span>
+        <div><h4>Idaho-licensed, background-checked techs</h4><p>The person at your door is the one doing the work.</p></div>
+      </div>
+      <div class="why-item">
+        <span class="wn">03</span>
+        <div><h4>We clean up like we were never there</h4><p>Boot covers, drop cloths, and the job site left better than we found it.</p></div>
+      </div>
     </div>
-    <div class="svc-view-all" data-reveal>
-      <a class="btn btn-ghost" href="plumbing-why-us.html">See Why Homeowners Choose Us &rarr;</a>
-    </div>
+  </div>
+  <div class="wrap svc-view-all" data-reveal>
+    <a class="btn btn-ghost" href="plumbing-why-us.html">See Why Homeowners Choose Us &rarr;</a>
   </div>
 </section>
 
-<section class="coverage-section" id="areas">
-  <div class="wrap section">
-    <div class="section-head">
-      <p class="eyebrow" data-reveal>Coverage</p>
-      <h2 data-reveal>Serving Homeowners Across North Idaho.</h2>
-    </div>
-    <div class="chip-cloud" data-reveal style="display:flex;flex-wrap:wrap;gap:10px;">
+<svg class="ridge" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,38 L130,14 L270,40 L410,6 L550,34 L700,10 L860,36 L1000,12 L1160,38 L1300,16 L1440,34 L1440,60 Z" fill="var(--ink)"/></svg>
+
+<section class="coverage-section section" id="areas">
+  <div class="wrap">
+    <p class="eyebrow on-dark" data-reveal>Coverage</p>
+    <h2 style="color:#fff;margin:12px 0 22px;" data-reveal>Serving Homeowners Across North Idaho.</h2>
+    <div class="chip-cloud" data-reveal>
       <span class="contact-badge">Coeur d&rsquo;Alene, ID</span>
       <span class="contact-badge">Post Falls, ID</span>
       <span class="contact-badge">Hayden, ID</span>
@@ -399,7 +419,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       <span class="contact-badge">Spokane, WA</span>
     </div>
     <div class="svc-view-all" data-reveal>
-      <a class="btn btn-ghost" href="plumbing-coverage.html">See Full Coverage &amp; Response Times &rarr;</a>
+      <a class="btn btn-ghost on-dark" href="plumbing-coverage.html">See Full Coverage &amp; Response Times &rarr;</a>
     </div>
   </div>
 </section>
@@ -411,14 +431,17 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
       <h2 data-reveal>Reviews From The Neighborhood.</h2>
     </div>
     <div class="spotlight" data-reveal>
-      <div>
-        <blockquote>&ldquo;Called about a water heater with no hot water in the morning, had a tech out same afternoon. Priced it before starting, no surprises.&rdquo;</blockquote>
-        <cite>Sample Review &mdash; Coeur d&rsquo;Alene, ID</cite>
-      </div>
-      <div class="spotlight-score">
-        <div class="num">4.9</div>
-        <div class="stars">★★★★★</div>
-        <div class="of">Sample rating format</div>
+      <span class="spotlight-mark" aria-hidden="true">&ldquo;</span>
+      <div class="spotlight-inner">
+        <div>
+          <blockquote>Called about a water heater with no hot water in the morning, had a tech out same afternoon. Priced it before starting, no surprises.</blockquote>
+          <cite>Sample Review &mdash; Coeur d&rsquo;Alene, ID</cite>
+        </div>
+        <div class="spotlight-score">
+          <div class="num">4.9</div>
+          <div class="stars">★★★★★</div>
+          <div class="of">Sample rating format</div>
+        </div>
       </div>
     </div>
     <div class="svc-view-all" data-reveal>
@@ -427,7 +450,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
   </div>
 </section>
 
-<section class="section" id="faq" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+<section class="faq-panel section" id="faq">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-reveal>Questions</p>
@@ -449,14 +472,16 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
   </div>
 </section>
 
+<svg class="ridge" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,42 L120,20 L250,46 L390,12 L530,38 L680,8 L830,34 L970,14 L1130,40 L1270,18 L1440,36 L1440,60 Z" fill="var(--ink)"/></svg>
+
 <section class="cta-band">
   <div class="wrap">
-    <p class="eyebrow" style="justify-content:center;" data-reveal>Get It Fixed</p>
+    <p class="eyebrow on-dark" data-reveal>Get It Fixed</p>
     <h2 data-reveal>Something Leaking, Clogged, Or Cold?</h2>
     <p>Tell us what&rsquo;s going on and we&rsquo;ll get back to you fast with a straight answer and a fair price.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call or Text</a>
-      <a class="btn btn-ghost" href="plumbing-contact.html">Contact Us</a>
+      <a class="btn btn-ghost on-dark" href="plumbing-contact.html">Contact Us</a>
     </div>
   </div>
 </section>
