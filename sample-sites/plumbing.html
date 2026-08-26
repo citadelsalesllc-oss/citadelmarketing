@@ -244,6 +244,11 @@ footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
 [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
 [data-reveal].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}}
+
+[data-reveal-letters]{opacity:1;}
+.pop-letter{display:inline-block;opacity:0;transform:translateY(0.55em);transition:opacity .5s ease, transform .55s cubic-bezier(.22,.9,.32,1);}
+[data-reveal-letters].is-in .pop-letter{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.pop-letter{opacity:1;transform:none;transition:none;}}
 </style>
 </head>
 <body>
@@ -302,7 +307,7 @@ footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
     <div>
       <div class="manifesto-head">
         <p class="eyebrow on-dark" data-reveal>Residential Plumbing &mdash; North Idaho</p>
-        <h1 aria-hidden="true" data-reveal>Unseen work.<br>Unquestionable craft.</h1>
+        <h1 aria-hidden="true" data-reveal-letters>Unseen work.<br>Unquestionable craft.</h1>
       </div>
       <p class="manifesto-lede" data-reveal>Ridgeline Plumbing Co. handles the pipework, pressure, and fixtures that keep a North Idaho home running &mdash; diagnosed straight, priced upfront, and signed off before we leave.</p>
       <div class="manifesto-ctas" data-reveal>
@@ -477,7 +482,7 @@ footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
 <section class="cta-band">
   <div class="wrap">
     <p class="eyebrow on-dark" data-reveal>Get It Fixed</p>
-    <h2 data-reveal>Something Leaking, Clogged, Or Cold?</h2>
+    <h2 data-reveal-letters>Something Leaking, Clogged, Or Cold?</h2>
     <p>Tell us what&rsquo;s going on and we&rsquo;ll get back to you fast with a straight answer and a fair price.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call or Text</a>
@@ -542,7 +547,53 @@ footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
     });
   }
   var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealEls = document.querySelectorAll('[data-reveal]');
+
+  function splitLetters(el){
+    var label = el.getAttribute('aria-label');
+    if (!label) {
+      label = '';
+      Array.prototype.forEach.call(el.childNodes, function(node){
+        label += node.nodeType === 3 ? node.textContent : ' ';
+      });
+      label = label.replace(/\s+/g, ' ').trim();
+    }
+    el.setAttribute('aria-label', label);
+    var wrap = document.createElement('span');
+    wrap.setAttribute('aria-hidden', 'true');
+    var idx = 0;
+    function addWord(word){
+      if (!word) return;
+      var wordSpan = document.createElement('span');
+      wordSpan.style.whiteSpace = 'nowrap';
+      word.split('').forEach(function(ch){
+        var span = document.createElement('span');
+        span.className = 'pop-letter';
+        span.textContent = ch;
+        span.style.transitionDelay = (Math.min(idx, 26) * 18) + 'ms';
+        wordSpan.appendChild(span);
+        idx++;
+      });
+      wrap.appendChild(wordSpan);
+    }
+    Array.prototype.forEach.call(el.childNodes, function(node){
+      if (node.nodeType === 3) {
+        var words = node.textContent.split(' ');
+        words.forEach(function(word, i){
+          addWord(word);
+          if (i < words.length - 1) wrap.appendChild(document.createTextNode(' '));
+        });
+      } else {
+        wrap.appendChild(node.cloneNode(true));
+      }
+    });
+    el.innerHTML = '';
+    el.appendChild(wrap);
+  }
+  if (!rm) {
+    document.querySelectorAll('[data-reveal-letters]').forEach(splitLetters);
+  }
+
+  var revealEls = document.querySelectorAll('[data-reveal], [data-reveal-letters]');
   if (!rm && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){ if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });

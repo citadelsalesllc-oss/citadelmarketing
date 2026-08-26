@@ -149,6 +149,11 @@ footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
 [data-reveal].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}}
 
+[data-reveal-letters]{opacity:1;}
+.pop-letter{display:inline-block;opacity:0;transform:translateY(0.55em);transition:opacity .5s ease, transform .55s cubic-bezier(.22,.9,.32,1);}
+[data-reveal-letters].is-in .pop-letter{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.pop-letter{opacity:1;transform:none;transition:none;}}
+
 .cta-band{position:relative;background:var(--ink);color:#fff;text-align:center;padding:76px 0;}
 .cta-band .eyebrow{justify-content:center;}
 .cta-band h2{color:#fff;font-size:clamp(28px,4.4vw,44px);margin:12px 0 18px;}
@@ -229,7 +234,7 @@ footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
 <section class="page-hero">
   <div class="wrap">
     <p class="breadcrumb"><a href="plumbing.html">Home</a> / Services</p>
-    <h1 data-reveal>Everything We Fix, In One Place.</h1>
+    <h1 data-reveal-letters>Everything We Fix, In One Place.</h1>
     <p class="page-hero-lede" data-reveal>Six things homeowners call us for most, priced upfront. Tap any service below to see photos from the field.</p>
   </div>
 </section>
@@ -274,7 +279,7 @@ footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
 <section class="cta-band">
   <div class="wrap">
     <p class="eyebrow on-dark" data-reveal>Not Seeing Your Problem Listed?</p>
-    <h2 data-reveal>Call Us &mdash; If It Involves A Pipe, We&rsquo;ve Probably Seen It.</h2>
+    <h2 data-reveal-letters>Call Us &mdash; If It Involves A Pipe, We&rsquo;ve Probably Seen It.</h2>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call or Text</a>
       <a class="btn btn-ghost on-dark" href="plumbing-contact.html">Request An Estimate</a>
@@ -361,7 +366,53 @@ footer.site{background:var(--ink-2);color:var(--on-dark-soft);padding:0;}
     });
   }
   var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealEls = document.querySelectorAll('[data-reveal]');
+
+  function splitLetters(el){
+    var label = el.getAttribute('aria-label');
+    if (!label) {
+      label = '';
+      Array.prototype.forEach.call(el.childNodes, function(node){
+        label += node.nodeType === 3 ? node.textContent : ' ';
+      });
+      label = label.replace(/\s+/g, ' ').trim();
+    }
+    el.setAttribute('aria-label', label);
+    var wrap = document.createElement('span');
+    wrap.setAttribute('aria-hidden', 'true');
+    var idx = 0;
+    function addWord(word){
+      if (!word) return;
+      var wordSpan = document.createElement('span');
+      wordSpan.style.whiteSpace = 'nowrap';
+      word.split('').forEach(function(ch){
+        var span = document.createElement('span');
+        span.className = 'pop-letter';
+        span.textContent = ch;
+        span.style.transitionDelay = (Math.min(idx, 26) * 18) + 'ms';
+        wordSpan.appendChild(span);
+        idx++;
+      });
+      wrap.appendChild(wordSpan);
+    }
+    Array.prototype.forEach.call(el.childNodes, function(node){
+      if (node.nodeType === 3) {
+        var words = node.textContent.split(' ');
+        words.forEach(function(word, i){
+          addWord(word);
+          if (i < words.length - 1) wrap.appendChild(document.createTextNode(' '));
+        });
+      } else {
+        wrap.appendChild(node.cloneNode(true));
+      }
+    });
+    el.innerHTML = '';
+    el.appendChild(wrap);
+  }
+  if (!rm) {
+    document.querySelectorAll('[data-reveal-letters]').forEach(splitLetters);
+  }
+
+  var revealEls = document.querySelectorAll('[data-reveal], [data-reveal-letters]');
   if (!rm && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){ if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });

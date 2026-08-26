@@ -141,6 +141,11 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
 [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
 [data-reveal].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}}
+
+[data-reveal-letters]{opacity:1;}
+.pop-letter{display:inline-block;opacity:0;transform:translateY(0.55em);transition:opacity .5s ease, transform .55s cubic-bezier(.22,.9,.32,1);}
+[data-reveal-letters].is-in .pop-letter{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.pop-letter{opacity:1;transform:none;transition:none;}}
 .brand-logo{height:52px;width:auto;display:block;}
 @media (max-width:900px){.brand-logo{height:42px;}}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
@@ -192,7 +197,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
 <section class="page-hero">
   <div class="wrap">
     <p class="breadcrumb"><a href="plumbing.html">Home</a> / FAQ</p>
-    <h1 data-reveal>Frequently Asked Questions.</h1>
+    <h1 data-reveal-letters>Frequently Asked Questions.</h1>
     <p class="page-hero-lede" data-reveal>Still have a question? Call or text 208.555.0142 &mdash; a real person answers.</p>
   </div>
 </section>
@@ -235,7 +240,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
 <section class="cta-band">
   <div class="wrap">
     <p class="eyebrow" style="justify-content:center;" data-reveal>Still Have A Question?</p>
-    <h2 data-reveal>Just Call &mdash; It&rsquo;s Faster Than Email.</h2>
+    <h2 data-reveal-letters>Just Call &mdash; It&rsquo;s Faster Than Email.</h2>
     <p>A real person answers, not a script.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:12085550142">208.555.0142 &mdash; Call or Text</a>
@@ -300,7 +305,53 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
     });
   }
   var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealEls = document.querySelectorAll('[data-reveal]');
+
+  function splitLetters(el){
+    var label = el.getAttribute('aria-label');
+    if (!label) {
+      label = '';
+      Array.prototype.forEach.call(el.childNodes, function(node){
+        label += node.nodeType === 3 ? node.textContent : ' ';
+      });
+      label = label.replace(/\s+/g, ' ').trim();
+    }
+    el.setAttribute('aria-label', label);
+    var wrap = document.createElement('span');
+    wrap.setAttribute('aria-hidden', 'true');
+    var idx = 0;
+    function addWord(word){
+      if (!word) return;
+      var wordSpan = document.createElement('span');
+      wordSpan.style.whiteSpace = 'nowrap';
+      word.split('').forEach(function(ch){
+        var span = document.createElement('span');
+        span.className = 'pop-letter';
+        span.textContent = ch;
+        span.style.transitionDelay = (Math.min(idx, 26) * 18) + 'ms';
+        wordSpan.appendChild(span);
+        idx++;
+      });
+      wrap.appendChild(wordSpan);
+    }
+    Array.prototype.forEach.call(el.childNodes, function(node){
+      if (node.nodeType === 3) {
+        var words = node.textContent.split(' ');
+        words.forEach(function(word, i){
+          addWord(word);
+          if (i < words.length - 1) wrap.appendChild(document.createTextNode(' '));
+        });
+      } else {
+        wrap.appendChild(node.cloneNode(true));
+      }
+    });
+    el.innerHTML = '';
+    el.appendChild(wrap);
+  }
+  if (!rm) {
+    document.querySelectorAll('[data-reveal-letters]').forEach(splitLetters);
+  }
+
+  var revealEls = document.querySelectorAll('[data-reveal], [data-reveal-letters]');
   if (!rm && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){ if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
