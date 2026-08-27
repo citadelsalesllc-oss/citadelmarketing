@@ -82,6 +82,8 @@ nav.main a.is-current{color:var(--blue);}
 .btn-primary:hover{background:var(--blue-hover);border-color:var(--blue-hover);transform:translateY(-1px);}
 .btn-ghost{background:transparent;color:var(--navy);border-color:var(--line-strong);}
 .btn-ghost:hover{border-color:var(--navy);}
+.btn:disabled{opacity:0.65;cursor:default;transform:none;}
+.btn-primary:disabled:hover{background:var(--blue);border-color:var(--blue);transform:none;}
 .btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
 
 .page-hero{background:var(--panel);border-bottom:1px solid var(--line);padding:40px 0 44px;}
@@ -208,8 +210,8 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
 
 <section class="section">
   <div class="wrap contact-grid">
-    <form class="quote-card" onsubmit="return false" aria-label="Request a callback (sample form)" data-reveal>
-      <div class="qc-head">Request A Callback</div>
+    <form class="quote-card" id="quoteForm" onsubmit="event.preventDefault(); var b=this.querySelector('.btn'); b.textContent='Request Sent ✓'; b.disabled=true; this.classList.add('is-submitted'); return false;" aria-label="Request a callback (sample form)" data-reveal>
+      <div class="qc-head">Get A Quote</div>
       <div class="qc-sub">We&rsquo;ll call you back within the hour during business hours.</div>
       <div class="qc-row2">
         <div class="qc-field"><label for="c-name">Name</label><input id="c-name" type="text" placeholder="Jane Homeowner"></div>
@@ -228,7 +230,7 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
         </div>
       </div>
       <div class="qc-field"><label for="c-notes">Anything Else We Should Know?</label><textarea id="c-notes" placeholder="Optional &mdash; when it started, what you've tried, best time to call..."></textarea></div>
-      <button type="submit" class="btn btn-primary">Request Callback</button>
+      <button type="submit" class="btn btn-primary">Get My Quote</button>
       <div class="qc-note">Sample form for demonstration &mdash; not connected to a live inbox.</div>
     </form>
     <div class="contact-facts" data-reveal>
