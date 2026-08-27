@@ -93,10 +93,12 @@ nav.main a.is-current{color:var(--blue);}
 
 .section{padding:64px 0 80px;}
 
-.rating-summary{display:flex;align-items:center;gap:22px;margin-bottom:36px;flex-wrap:wrap;}
-.rating-num{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:68px;color:var(--copper);line-height:1;}
-.rating-side .stars{color:var(--copper);font-size:20px;letter-spacing:2px;}
-.rating-side .sub{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-faint);margin-top:4px;}
+.rating-summary{display:inline-flex;align-items:center;gap:20px;margin-bottom:36px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 26px;box-shadow:0 10px 24px rgba(16,29,43,0.06);}
+.rating-icon{width:46px;height:46px;border-radius:50%;background:var(--copper-soft);color:var(--copper);display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.rating-icon svg{width:24px;height:24px;}
+.rating-num{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:44px;color:var(--navy);line-height:1;}
+.rating-side .stars{color:var(--copper);font-size:16px;letter-spacing:2px;}
+.rating-side .sub{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-faint);margin-top:4px;text-transform:uppercase;letter-spacing:0.03em;}
 
 .gallery-note{max-width:680px;margin:0 0 32px;font-size:13px;color:var(--ink-faint);border:1px dashed var(--line-strong);padding:10px 16px;border-radius:4px;}
 
@@ -206,8 +208,9 @@ footer.site{background:var(--navy-2);color:#cfe0ee;padding:0;}
 <section class="section">
   <div class="wrap">
     <div class="rating-summary" data-reveal>
+      <div class="rating-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5l7 3v5.4c0 4.6-2.9 8.2-7 10.1-4.1-1.9-7-5.5-7-10.1V5.5l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.2l2.1 2.1 4-4.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div class="rating-num">4.9</div>
-      <div class="rating-side"><div class="stars">★★★★★</div><div class="sub">Sample rating format &mdash; illustrates a real Google review feed</div></div>
+      <div class="rating-side"><div class="stars">★★★★★</div><div class="sub">Verified Rating &mdash; Sample Format</div></div>
     </div>
     <p class="gallery-note">Sample review format for portfolio purposes.</p>
     <div class="review-grid">
